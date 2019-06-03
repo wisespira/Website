@@ -19,7 +19,8 @@ export class AppComponent {
     renderer = new THREE.WebGLRenderer();
     scene = null;
     camera = null;
-    mesh = null;
+    mesh = [];
+    numOfSquares = 5;
 
     constructor() {
         this.scene = new THREE.Scene();
@@ -28,10 +29,25 @@ export class AppComponent {
         this.camera.position.z = 1000;
 
         const geometry = new THREE.BoxGeometry(200, 200, 200);
-        const material = new THREE.MeshBasicMaterial({color: 0xff0000, wireframe: true});
-        this.mesh = new THREE.Mesh(geometry, material);
+        console.log(typeof 0xff0000);
+       
+        
+         for(var i = 0; i<this.numOfSquares;i++) {
+              let material = new THREE.MeshBasicMaterial({color: Math.floor(Math.random()*16777215), wireframe: true});
+            var mesh = new THREE.Mesh(geometry, material);
+            mesh.position.x = (Math.random() - 0.5) * window.innerWidth;
+            mesh.position.y = (Math.random() - 0.5) * window.innerHeight;
+            mesh.position.z = (Math.random() - 0.5) * 1000;
+           
+            this.mesh.push(mesh);
+             mesh.translateY(40)
+            this.scene.add(mesh);
+         
+        }
+        
+       // this.mesh = new THREE.Mesh(geometry, material);
 
-        this.scene.add(this.mesh);
+        //this.scene.add(this.mesh);
     }
 
     ngAfterViewInit() {
@@ -40,11 +56,25 @@ export class AppComponent {
         console.table(this.rendererContainer.nativeElement);
         this.animate();
     }
-
+     y = 40;
     animate() {
         window.requestAnimationFrame(() => this.animate());
-        this.mesh.rotation.x += 0.01;
-        this.mesh.rotation.y += 0.02;
+       for(var i = 0; i<this.numOfSquares;i++) {
+           this.mesh[i].rotation.x += 0.01;
+           this.mesh[i].rotation.y += 0.02;
+       }
+       
+         this.mesh[3].translateY(this.y)
+       // console.log(this.mesh[3].position)
+        if(this.mesh[3].position.y>1000){
+           this.y = -this.y;
+        }
+       if(this.mesh[3].position.y<-1000){
+           this.y = -this.y;
+        }
+       // this.mesh[3].translateY(-40)
+        //this.mesh.rotation.x += 0.01;
+       // this.mesh.rotation.y += 0.02;
         this.renderer.render(this.scene, this.camera);
     }
 }
