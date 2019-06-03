@@ -16,11 +16,32 @@ export class AppComponent {
 
     this.camera.updateProjectionMatrix();
     }
+    
+       @HostListener('window:mousemove', ['$event'])
+    onMouseMove(event) {
+    event.preventDefault();
+
+            this.mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+            this.mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+            this.raycaster.setFromCamera(this.mouse, this.camera);
+            
+            var intersects = this.raycaster.intersectObjects(this.scene.children, true);
+            for (var i = 0; i < intersects.length; i++) {
+                console.log(intersects[0].object);
+                intersects[0].object.position.x++;
+            }
+    }
+    
+    
+    
+    
+    raycaster = new THREE.Raycaster();
+    mouse = new THREE.Vector2();
     renderer = new THREE.WebGLRenderer();
     scene = null;
     camera = null;
-    mesh = [];
-    numOfSquares = 5;
+    meshArray = [];
+    numOfSquares = 10;
 
     constructor() {
         this.scene = new THREE.Scene();
@@ -28,8 +49,8 @@ export class AppComponent {
         this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
         this.camera.position.z = 1000;
 
-        const geometry = new THREE.BoxGeometry(200, 200, 200);
-        console.log(typeof 0xff0000);
+        const geometry = new THREE.IcosahedronGeometry(100, 0);
+       // console.log(typeof 0xff0000);
        
         
          for(var i = 0; i<this.numOfSquares;i++) {
@@ -39,7 +60,12 @@ export class AppComponent {
             mesh.position.y = (Math.random() - 0.5) * window.innerHeight;
             mesh.position.z = (Math.random() - 0.5) * 1000;
            
-            this.mesh.push(mesh);
+            let vector = [-1+Math.floor(Math.random() * 3)  ,-1+Math.floor(Math.random() * 3) ];
+            console.log(vector);
+             mesh.position.x
+               mesh.position.y
+            
+            this.meshArray.push({mesh, vector});
              mesh.translateY(40)
             this.scene.add(mesh);
          
@@ -53,25 +79,26 @@ export class AppComponent {
     ngAfterViewInit() {
         this.renderer.setSize(window.innerWidth, window.innerHeight);
         this.rendererContainer.nativeElement.appendChild(this.renderer.domElement);
-        console.table(this.rendererContainer.nativeElement);
+        //console.table(this.rendererContainer.nativeElement);
         this.animate();
     }
      y = 40;
     animate() {
         window.requestAnimationFrame(() => this.animate());
        for(var i = 0; i<this.numOfSquares;i++) {
-           this.mesh[i].rotation.x += 0.01;
-           this.mesh[i].rotation.y += 0.02;
-       }
-       
-         this.mesh[3].translateY(this.y)
-       // console.log(this.mesh[3].position)
-        if(this.mesh[3].position.y>1000){
-           this.y = -this.y;
-        }
-       if(this.mesh[3].position.y<-1000){
-           this.y = -this.y;
-        }
+           this.meshArray[i]['mesh'].rotation.x += 0.01;
+           this.meshArray[i]['mesh'].rotation.y += 0.02;
+           
+           this.meshArray[i]['mesh'].position.x += this.meshArray[i]['vector'][0];
+           this.meshArray[i]['mesh'].position.y += this.meshArray[i]['vector'][1];
+           
+           if(this.meshArray[i]['mesh'].position.x>window.innerWidth||this.meshArray[i]['mesh'].position.x<0){
+           this.meshArray[i]['vector'][0] = -this.meshArray[i]['vector'][0];
+           }
+           if(this.meshArray[i]['mesh'].position.y>window.innerHeight||this.meshArray[i]['mesh'].position.y<0){
+           this.meshArray[i]['vector'][1] = -this.meshArray[i]['vector'][1];
+           }
+
        // this.mesh[3].translateY(-40)
         //this.mesh.rotation.x += 0.01;
        // this.mesh.rotation.y += 0.02;
