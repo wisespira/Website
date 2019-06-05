@@ -4,7 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { MaterialModule } from './material.module';
+//import { MaterialModule } from './material.module';
+import { AngularFullpageModule } from '@fullpage/angular-fullpage';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { MaterialModule } from './material.module';
   imports: [
     BrowserModule,
    // MaterialModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFullpageModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
