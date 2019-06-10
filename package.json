@@ -24,7 +24,10 @@
     "@angular/router": "~7.0.0",
     "@fullpage/angular-fullpage": "0.0.12",
     "@types/three": "^0.103.2",
+    "bootstrap": "^4.3.1",
+    "chart.js": "^2.7.2",
     "core-js": "^2.5.4",
+    "ng2-charts": "^1.6.0",
     "rxjs": "~6.3.3",
     "three": "^0.105.1",
     "zone.js": "~0.8.26"
