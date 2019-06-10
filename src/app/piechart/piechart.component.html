@@ -1,13 +1,17 @@
-<div style="display: block">
-  <canvas baseChart style="position: absolute;margin-left: auto;margin-right: auto;/* left: 0; */right: 10%;top: 20%;"
+<div style="display: block;max-width: 1500px;">
+  <canvas baseChart 
               [data]="doughnutChartData"
               [labels]="doughnutChartLabels"
               [chartType]="doughnutChartType"
               [colors]="pieChartColors"
               [legend]="false"
-               (chartClick)="onChartClick($event)"
+
+              (chartClick)="onChartClick($event)"
               ></canvas>
     
     
 </div>
-<div style="position: absolute;margin-left: auto;margin-right: auto;/* left: 0; */right: 10%;top: 20%;">{{infoOnSelect}}</div>
+<div style="
+    position: absolute;
+"  [innerHTML]="infoOnSelect"></div>
+<!--style="position: absolute;margin-left: auto;margin-right: auto;/* left: 0; */right: 10%;top: 10%;"-->

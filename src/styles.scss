@@ -16,24 +16,19 @@ canvas{
     border: 6px solid black;
 }
 
-.navbar-text{
-    color: rgba(0,0,0,.9);
-    text-decoration: none;
-    font-size: 2rem;
-
-}
-
-nav{
-   display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    padding: .5rem 1rem;
-    font-family: Chivo;
+.chart{
+       height: 60vh;
+    width: 60vh;
+    position: relative;
+    top: 50%;
+   
+   
+    cursor: hand;
+    cursor: pointer;
+    filter: grayscale(60%); 
+    
+    
+    
+    
     
 }
