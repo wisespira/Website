@@ -34,7 +34,7 @@ export class AppComponent {
         if(this.mounseVel[0]!=0||this.mounseVel[1]!=0){
   intersects[0].object['vector'] = [this.mounseVel[0]*100,this.mounseVel[1]*100];}
   //console.log(intersects[0].object.vector);
-console.log(Object.keys(intersects[0].object));
+//console.log(Object.keys(intersects[0].object));
     }
   }
 
