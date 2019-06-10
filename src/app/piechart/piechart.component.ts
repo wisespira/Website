@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class PiechartComponent implements OnInit {
 
   
-  infoOnSelect = "yo yo yo";
+  infoOnSelect = "Select slise for breakdown";
   projectObjs = 
   [['PWA/Angular',2,'rgba(0, 122, 168,1)'],
   ['ionic3',6,'rgba(2, 56, 110,1)'],
@@ -42,7 +42,9 @@ export class PiechartComponent implements OnInit {
   }
   
   onChartClick(event) {
-    console.log(event);
+    let num =  Number(event.active[0]._index);
+    console.log(event.active[0]._index);
+    this.infoOnSelect = this.projectObjs[num][0].toString();
   }
 
 }
