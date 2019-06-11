@@ -8,6 +8,8 @@ import { ChartsModule } from 'ng2-charts';
 //import { MaterialModule } from './material.module';
 import { AngularFullpageModule } from '@fullpage/angular-fullpage';
 import { PiechartComponent } from './piechart/piechart.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -20,7 +22,8 @@ import { PiechartComponent } from './piechart/piechart.component';
     BrowserModule,
    // MaterialModule,
     AppRoutingModule,
-    AngularFullpageModule 
+    AngularFullpageModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }) 
   ],
   providers: [],
   bootstrap: [AppComponent]
