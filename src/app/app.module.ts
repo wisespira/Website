@@ -12,20 +12,26 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { NavbarComponent } from './navbar/navbar.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MglTimelineModule } from 'angular-mgl-timeline';
+import { TimelineComponent } from './timeline/timeline.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PiechartComponent,
-    NavbarComponent
+    NavbarComponent,
+    TimelineComponent
   ],
   imports: [
+  BrowserAnimationsModule,
+  MglTimelineModule,
   ChartsModule,
-    BrowserModule,
+  BrowserModule,
    // MaterialModule,
-    AppRoutingModule,
-    AngularFullpageModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }) 
+  AppRoutingModule,
+  AngularFullpageModule,
+  ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }) 
   ],
   providers: [],
   bootstrap: [AppComponent]

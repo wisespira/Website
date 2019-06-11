@@ -26,6 +26,7 @@
     "@angular/service-worker": "~7.0.0",
     "@fullpage/angular-fullpage": "0.0.12",
     "@types/three": "^0.103.2",
+    "angular-mgl-timeline": "^0.3.2",
     "bootstrap": "^4.3.1",
     "chart.js": "^2.7.2",
     "core-js": "^2.5.4",
