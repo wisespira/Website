@@ -27,8 +27,9 @@ canvas{
     cursor: pointer;
     filter: grayscale(60%); 
     
-    
-    
-    
-    
+}
+.navbar{
+    position: absolute;
+    width: -webkit-fill-available;
+    z-index: 9999;
 }

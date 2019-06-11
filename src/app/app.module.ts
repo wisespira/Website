@@ -10,12 +10,14 @@ import { AngularFullpageModule } from '@fullpage/angular-fullpage';
 import { PiechartComponent } from './piechart/piechart.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PiechartComponent
+    PiechartComponent,
+    NavbarComponent
   ],
   imports: [
   ChartsModule,
