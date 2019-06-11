@@ -1,5 +1,5 @@
 
-<div style=" overflow-y: scroll;   max-height: 100vh;">
+<div class="timeline">
     <h2 style="
     text-align: center;
     display: block;
@@ -14,7 +14,8 @@
         <div>{{entry.content}}</div>
       </div>
     </mgl-timeline-entry-content>
-    <mgl-timeline-entry-dot [class]="color ? 'primary' : 'accent'" 
+    <mgl-timeline-entry-dot [style.background-color]="entry.content ?entry.colour:'' "
+                            [class]="color ? 'primary' : 'accent'" 
                             [size]="size"
                             (click)="onDotClick($event)"></mgl-timeline-entry-dot>
     <mgl-timeline-entry-side>{{entry.date}}</mgl-timeline-entry-side>

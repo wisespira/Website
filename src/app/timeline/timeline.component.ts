@@ -15,80 +15,36 @@ alternate: boolean = true;
   expandEnabled: boolean = true;
   side = 'left';
 
-  entries = [ {
-      header: '1000 Stackoverflow rep ',
+  entries = [
+    {
+      header: 'WHAT2EAT APP',
       content: '',
-      date: 'SEP 2019'
+      date: 'SEP 2019',
+      colour: '#A0A'
     },
    {
       header: '1000 Stackoverflow rep ',
       content: '',
-      date: 'SEP 2019'
-    },
-   {
-      header: '1000 Stackoverflow rep ',
-      content: '',
-      date: 'SEP 2019'
-    },
-   {
-      header: '1000 Stackoverflow rep ',
-      content: '',
-      date: 'SEP 2019'
-    },
-   {
-      header: '1000 Stackoverflow rep ',
-      content: '',
-      date: 'SEP 2019'
-    },
-   {
-      header: '1000 Stackoverflow rep ',
-      content: '',
-      date: 'SEP 2019'
-    },
-   {
-      header: '1000 Stackoverflow rep ',
-      content: '',
-      date: 'SEP 2019'
-    },
-   {
-      header: '1000 Stackoverflow rep ',
-      content: '',
-      date: 'SEP 2019'
-    },
-   {
-      header: '1000 Stackoverflow rep ',
-      content: '',
-      date: 'SEP 2019'
+      date: 'SEP 2019',
+       colour: '#A0A'
     },
     {
-      header: '1000 Stackoverflow rep ',
-      content: '',
-      date: 'SEP 2019'
-    },
-    {
-      header: 'WHAT2EAT',
-      content: '',
-      date: 'SEP 2019'
-    },
-   {
-      header: '1000 Stackoverflow rep ',
-      content: '',
-      date: 'SEP 2019'
-    },
-    {
-      header: 'NUIT',
+      header: 'Applications Developer Placement (NUIT)',
       content: 'content',
-      date: 'JUN 2018- SEP 2019'
+      date: 'JUN 2018- SEP 2019',
+       colour: '#A0A'
     },
       {
-      header: 'Newcastle UNI',
+      header: 'Computer Science with Industrial Placement BSc Honours',
       content: 'content',
-      date: 'SEP 2016- JUN 2020'
+      date: 'SEP 2016- JUN 2020',
+       colour: '#A0A'
     },
     {
       header: '2nd Nationaly in tec4good competition',
       content: '',
-      date: 'SEP 2012'
+      date: 'SEP 2012',
+       colour: '#A0A'
     }
   ]
 
