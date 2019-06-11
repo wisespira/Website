@@ -51,10 +51,10 @@ export class AppComponent {
       // fullpage options
       licenseKey: "YOUR LICENSE KEY HERE",
       anchors: [
-        "firstPage",
-        "secondPage",
-        "thirdPage",
-        "fourthPage",
+        "Home",
+        "Skills",
+        "Experience",
+        "Resume+Contact",
         "lastPage"
       ],
       menu: "#menu",
@@ -67,6 +67,10 @@ export class AppComponent {
       //  console.log(origin.index);
       }
     };
+
+
+
+    /*SHould put this in own component also needs refactor -- ['mesh'] is a silly array from memory */
 
     this.scene = new THREE.Scene();
     this.camera = new THREE.PerspectiveCamera(

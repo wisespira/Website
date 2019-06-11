@@ -1,4 +1,9 @@
+
 <div style="display: block;max-width: 1500px;">
+    <div style="display: block">
+    <div style="
+    text-align: center;
+">Skills By # of Projects</div>
   <canvas baseChart 
               [data]="doughnutChartData"
               [labels]="doughnutChartLabels"
@@ -8,10 +13,11 @@
 
               (chartClick)="onChartClick($event)"
               ></canvas>
-    
-    
+      
+    </div>
+      <div   [innerHTML]="infoOnSelect"></div> 
+
 </div>
-<div style="
-    position: absolute;
-"  [innerHTML]="infoOnSelect"></div>
+
 <!--style="position: absolute;margin-left: auto;margin-right: auto;/* left: 0; */right: 10%;top: 10%;"-->
+<!--  <div style="display: inline-block">-->
