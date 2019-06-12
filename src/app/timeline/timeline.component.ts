@@ -18,33 +18,33 @@ alternate: boolean = true;
   entries = [
     {
       header: 'WHAT2EAT APP',
-      content: '',
-      date: 'SEP 2019',
-      colour: '#A0A'
+      content: 'Developed cooking App',
+      date: 'DEC 2019',
+      colour: '#BEED53'
     },
    {
       header: '1000 Stackoverflow rep ',
-      content: '',
+      content: '50+ non Wiki answers  top 5% ionic 4 top 10% ionic framwork',
       date: 'SEP 2019',
-       colour: '#A0A'
+       colour: '#FCC201'
     },
     {
       header: 'Applications Developer Placement (NUIT)',
       content: 'content',
       date: 'JUN 2018- SEP 2019',
-       colour: '#A0A'
+       colour: '#7FBDD9'
     },
       {
       header: 'Computer Science with Industrial Placement BSc Honours',
-      content: 'content',
+      content: 'Started University',
       date: 'SEP 2016- JUN 2020',
-       colour: '#A0A'
+       colour: '#62A7C5'
     },
     {
       header: '2nd Nationaly in tec4good competition',
-      content: '',
+      content: 'App consept for helping the elderly',
       date: 'SEP 2012',
-       colour: '#A0A'
+       colour: '#BD4491'
     }
   ]
 

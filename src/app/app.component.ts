@@ -141,7 +141,7 @@ export class AppComponent {
     this.mousePositionOld = [this.mousePositionNew[0],this.mousePositionNew[1] ]  ;
     }
   
-   // console.log(this.mounseVel);
+   // console.log(this.mounseVel);  could be simplified when done 
     for (var i = 0; i < this.numOfSquares; i++) {
       this.meshArray[i]["mesh"].rotation.x += 0.01;
       this.meshArray[i]["mesh"].rotation.y += 0.02;
@@ -149,6 +149,12 @@ export class AppComponent {
       this.meshArray[i]["mesh"].position.x +=  this.meshArray[i]["mesh"].vector[0];
       this.meshArray[i]["mesh"].position.y += this.meshArray[i]["mesh"].vector[1];
 
+       if (this.meshArray[i]["mesh"].position.x > window.innerWidth / 1.5){this.meshArray[i]["mesh"].position.x--; }
+       if (this.meshArray[i]["mesh"].position.x < -(window.innerWidth / 1.5)){this.meshArray[i]["mesh"].position.x++; } 
+
+       if(this.meshArray[i]["mesh"].position.y > window.innerHeight / 1.5){this.meshArray[i]["mesh"].position.y--;}
+       if(  this.meshArray[i]["mesh"].position.y < -(window.innerHeight / 1.5)){this.meshArray[i]["mesh"].position.y++;}
+       
       if (
         this.meshArray[i]["mesh"].position.x > window.innerWidth / 1.5 ||
         this.meshArray[i]["mesh"].position.x < -(window.innerWidth / 1.5)

@@ -15,19 +15,25 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MglTimelineModule } from 'angular-mgl-timeline';
 import { TimelineComponent } from './timeline/timeline.component';
+import { ResumeContactComponent } from './resume-contact/resume-contact.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { FormsModule }   from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     PiechartComponent,
     NavbarComponent,
-    TimelineComponent
+    TimelineComponent,
+    ResumeContactComponent
   ],
   imports: [
+  FormsModule,
   BrowserAnimationsModule,
   MglTimelineModule,
   ChartsModule,
   BrowserModule,
+  PdfViewerModule,
    // MaterialModule,
   AppRoutingModule,
   AngularFullpageModule,

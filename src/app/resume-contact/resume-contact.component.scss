@@ -1,9 +1,14 @@
-h2{
-    text-align: -webkit-center;
+.row {
+  display: flex;
 }
-.infoBox{
-   font-size: 12px !important;
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
 }
+
 .grid-container {
   display: inline-grid;
   grid-template-columns: auto 30vw;
@@ -24,7 +29,7 @@ top: 17.5vh;
 
 .grid-item {
 
-  padding: 20px;
-  font-size: 30px;
+
+  font-size: 20px;
   text-align: center;
 }
