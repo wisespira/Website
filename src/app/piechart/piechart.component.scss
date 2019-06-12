@@ -28,3 +28,15 @@ top: 17.5vh;
   font-size: 30px;
   text-align: center;
 }
+h4{
+   font-size: 1.0rem; 
+}
+.blink_me {
+  animation: blinker 3s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
