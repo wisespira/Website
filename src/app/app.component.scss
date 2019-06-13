@@ -2,6 +2,19 @@ canvas{
   display: block;
 }
 
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+    css-typing p{
+            font-size: 1.25rem !important;
+    }
+    .garry{
+        font-size: 1.25rem !important;
+    }
+    
+    
+}
+
 .css-typing{
         position: absolute;
    top: 40%;

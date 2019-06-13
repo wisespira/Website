@@ -3,7 +3,13 @@ h2{
 }
 .infoBox{
    font-size: 12px !important;
+    padding-left: 0px !important;
+        overflow-y: auto;
 }
+
+
+
+
 .grid-container {
   display: inline-grid;
   grid-template-columns: auto 30vw;
@@ -39,4 +45,16 @@ h4{
   50% {
     opacity: 0;
   }
+}
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+    .grid-container{
+            display: list-item !important;
+        
+    }
+    .infoBox{
+            max-height: 30vh !important;
+            padding: 20px !important;
+    }
 }

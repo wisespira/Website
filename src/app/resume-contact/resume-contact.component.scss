@@ -33,3 +33,15 @@ top: 17.5vh;
   font-size: 20px;
   text-align: center;
 }
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+    .pdf{
+            display: none !important;
+        
+    }
+    .grid-container {
+            display: block !important;
+    }
+}
