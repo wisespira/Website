@@ -18,31 +18,31 @@ alternate: boolean = true;
   entries = [
     {
       header: 'WHAT2EAT APP',
-      content: 'Developed cooking App',
+      content: 'Developed cooking App with ionic and firebase which allows users to query a cooking database based on the ingredients they have. Yet to go on BETA',
       date: 'DEC 2019',
       colour: '#BEED53'
     },
    {
       header: '1000 Stackoverflow rep ',
-      content: '50+ non Wiki answers  top 5% ionic 4 top 10% ionic framwork',
+      content: 'I set myself a goal to become an established user on StackOverflow. I achieved this with 50+ non-Wiki answers becoming a top 5% answer in ionic 4 top and 10% ionic framework',
       date: 'SEP 2019',
        colour: '#FCC201'
     },
     {
       header: 'Applications Developer Placement (NUIT)',
-      content: 'content',
+      content: 'My first role as a full-time developer, where I worked primarily with WordPress, Ionic/Angular, WPF/.NET Framework, node express, and Microsoft teams development',
       date: 'JUN 2018- SEP 2019',
        colour: '#7FBDD9'
     },
       {
       header: 'Computer Science with Industrial Placement BSc Honours',
-      content: 'Started University',
+      content: 'Currenly set for a first achiving 84% in second year. Megority of work was in Java, C and web',
       date: 'SEP 2016- JUN 2020',
        colour: '#62A7C5'
     },
     {
       header: '2nd Nationaly in tec4good competition',
-      content: 'App consept for helping the elderly',
+      content: 'Developed an App concept for helping the elderly with tutorial videos. My team was selected and we presented our concept at Alnwick castle coming second overall',
       date: 'SEP 2012',
        colour: '#BD4491'
     }
