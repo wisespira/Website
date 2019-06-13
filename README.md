@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="https://https://raw.githubusercontent.com/wisespira/Website/master/its%20the%20giff.gif">
+  <img src="https://raw.githubusercontent.com/wisespira/Website/master/its%20the%20giff.gif">
 </p>
 
 
