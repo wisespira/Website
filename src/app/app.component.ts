@@ -32,7 +32,11 @@ export class AppComponent {
      // console.log(intersects[0].object);
       //intersects[0].object.position.x++;
         if(this.mounseVel[0]!=0||this.mounseVel[1]!=0){
-  intersects[0].object['vector'] = [this.mounseVel[0]*100,this.mounseVel[1]*100];}
+  intersects[0].object['vector'][0] = intersects[0].object['vector'][0] + this.mounseVel[0]*100;
+  intersects[0].object['vector'][1] = intersects[0].object['vector'][1] + this.mounseVel[1]*100;
+ // intersects[0].object['cooldown'] =1000;
+  }
+  
   //console.log(intersects[0].object.vector);
 //console.log(Object.keys(intersects[0].object));
     }
@@ -101,6 +105,7 @@ export class AppComponent {
       mesh.position.y;
       // WHY IS THIS ALLOWED BUT NOT mesh.vector ?!?!??!?
       mesh['vector'] = vector;
+ 
       this.meshArray.push({ mesh, vector });
       mesh.translateY(40);
       this.scene.add(mesh);
@@ -143,15 +148,20 @@ export class AppComponent {
   
    // console.log(this.mounseVel);  could be simplified when done 
     for (var i = 0; i < this.numOfSquares; i++) {
+    
       this.meshArray[i]["mesh"].rotation.x += 0.01;
       this.meshArray[i]["mesh"].rotation.y += 0.02;
-
+      
       this.meshArray[i]["mesh"].position.x +=  this.meshArray[i]["mesh"].vector[0];
       this.meshArray[i]["mesh"].position.y += this.meshArray[i]["mesh"].vector[1];
-
-       if (this.meshArray[i]["mesh"].position.x > window.innerWidth / 1.5){this.meshArray[i]["mesh"].position.x--; }
-       if (this.meshArray[i]["mesh"].position.x < -(window.innerWidth / 1.5)){this.meshArray[i]["mesh"].position.x++; } 
-
+      
+      if(this.meshArray[i]["mesh"].vector[0]>1||this.meshArray[i]["mesh"].vector[0]<-1){
+this.meshArray[i]["mesh"].vector[0] = this.meshArray[i]["mesh"].vector[0]*0.995;
+}
+    if(this.meshArray[i]["mesh"].vector[1]>1||this.meshArray[i]["mesh"].vector[1]<-1){
+this.meshArray[i]["mesh"].vector[1] = this.meshArray[i]["mesh"].vector[1]*0.995;
+}
+     
        if(this.meshArray[i]["mesh"].position.y > window.innerHeight / 1.5){this.meshArray[i]["mesh"].position.y--;}
        if(  this.meshArray[i]["mesh"].position.y < -(window.innerHeight / 1.5)){this.meshArray[i]["mesh"].position.y++;}
        
