@@ -11,12 +11,12 @@
 
 .grid-container {
   display: inline-grid;
-  
+  height: 70vh;
     grid-template-columns: 60vw auto;
  
     // padding: 10px;
     width: -webkit-fill-available;
-    height: -webkit-fill-available;
+    //height: -webkit-fill-available;
     //margin: 10%;
   //  margin-top: 20%;
     position: absolute;
@@ -28,7 +28,12 @@ top: 17.5vh;
  
 
 }
-
+.download{
+ 
+    text-align: left !important;
+   padding-left: 95px;
+    margin-top: 10px;
+}
 .grid-item {
 
 
@@ -40,12 +45,16 @@ top: 17.5vh;
 @media only screen and (max-width: 1200px) {
     .grid-container{
                display: grid;
-                grid-template-rows: 60vh 30vw;
+                grid-template-rows: 50vh auto 20vw;
                 grid-template-columns: none;
     }
     .viewer{
             float: none !important;
             max-height: 50vh !important;
+    }
+    .download{
+        text-align: center !important;
+        padding-left: 0;
     }
 }
 .viewer{
@@ -61,4 +70,7 @@ and (max-device-width : 480px) {
    .pdf{
    display: none;
    }
+     .download{
+           display: none;
+    }
 }

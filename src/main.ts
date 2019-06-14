@@ -8,5 +8,10 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+//temp fix https://stackoverflow.com/questions/53329924/angular-7-service-worker-not-registered
+
+platformBrowserDynamic().bootstrapModule(AppModule).then(() => {
+  if ('serviceWorker' in navigator && environment.production) {
+    navigator.serviceWorker.register('/ngsw-worker.js');
+  }
+}).catch(err => console.error(err));
