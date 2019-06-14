@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PiechartComponent implements OnInit {
 
-  
   infoOnSelect: proj[] = [];
   selectedItem:string = "";
 
@@ -162,12 +161,16 @@ projectObjs: projectObjs[] = [{
   
   
   constructor() { 
+     
         for (let i = 0; i < this.projectObjs.length; i++){
             this.doughnutChartLabels.push(this.projectObjs[i].title); 
             this.doughnutChartData.push(this.projectObjs[i].num);   
             this.pieChartColors[0].backgroundColor.push(this.projectObjs[i].colour);
         }
      }
+     
+     
+     
   public doughnutChartLabels = [];
   public doughnutChartData = [];
   public pieChartColors = [
@@ -179,6 +182,8 @@ projectObjs: projectObjs[] = [{
 
   ngOnInit() {
   }
+  
+
   
   onChartClick(event) {
       console.log(event)

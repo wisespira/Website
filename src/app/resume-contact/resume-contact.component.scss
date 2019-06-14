@@ -6,7 +6,7 @@
 .column {
   flex: 50%;
   padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+ // height: 300px; /* Should be removed. Only for demonstration */
 }
 
 .grid-container {
@@ -34,14 +34,29 @@ top: 17.5vh;
   text-align: center;
 }
 
+
+@media only screen and (max-width: 1160px) {
+    .grid-container{
+               display: grid;
+                grid-template-rows: 60vh 30vw;
+                grid-template-columns: none;
+    }
+    .viewer{
+            float: none !important;
+            max-height: 50vh !important;
+    }
+}
+.viewer{
+    display: inline-block;
+    max-height: 70vh;
+    max-width: fit-content;
+    overflow-y: auto;
+    float: left;
+}
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 480px) {
-    .pdf{
-            display: none !important;
-        
-    }
-    .grid-container {
-            display: block !important;
-    }
+   .pdf{
+   display: none;
+   }
 }

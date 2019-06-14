@@ -14,7 +14,7 @@ alternate: boolean = true;
   size: number = 40;
   expandEnabled: boolean = true;
   side = 'left';
-
+ clicked = false;
   entries = [
     {
       header: 'WHAT2EAT APP',
@@ -53,6 +53,7 @@ alternate: boolean = true;
 
 
   onHeaderClick(event) {
+      this.clicked = true
       console.log(event);
     if (!this.expandEnabled) {
       event.stopPropagation();
