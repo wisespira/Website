@@ -23,10 +23,10 @@
       <div *ngFor="let proj of infoOnSelect; index as i" class="note">
    
          <hr>
-         <h4>&#8226; {{proj.title}}</h4>
-         <p>{{proj.body}}<span class="blink_me_slower" *ngIf="proj.giff&&!proj.showGiff" style="color: blue; cursor: pointer;" (click)="showMore(i)"> show more...</span>
+         <h4 style="font-size: 1.5rem">&#8226; {{proj.title}}</h4>
+         <p style="font-size: 1.2rem">{{proj.body}}<span class="blink_me_slower" *ngIf="proj.giff&&!proj.showGiff" style="color: blue; cursor: pointer;" (click)="showMore(i)"> show more...</span>
          <span *ngIf="proj.giff&&proj.showGiff"   style="color: blue; cursor: pointer;" (click)="showMore(i)"> show less...</span></p>
-         <div *ngIf="proj.giff&&proj.showGiff" ><img src={{proj.giff}} ></div>
+         <div *ngIf="proj.giff&&proj.showGiff" class="note"><img src={{proj.giff}} ></div>
       </div>
       </div>
    </div>
