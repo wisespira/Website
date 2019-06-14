@@ -52,7 +52,7 @@ h4{
 }
 
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 991px) {
     .grid-container{
                display: grid;
                 grid-template-rows: 35vh 10vw;
@@ -112,4 +112,5 @@ img{
 .scrolll{
     overflow-y: auto; 
     max-height: 60vh;
+    padding: 20px;
 }

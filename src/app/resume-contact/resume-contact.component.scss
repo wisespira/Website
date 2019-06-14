@@ -11,7 +11,9 @@
 
 .grid-container {
   display: inline-grid;
-  grid-template-columns: auto 30vw;
+  
+    grid-template-columns: 60vw auto;
+ 
     // padding: 10px;
     width: -webkit-fill-available;
     height: -webkit-fill-available;
@@ -35,7 +37,7 @@ top: 17.5vh;
 }
 
 
-@media only screen and (max-width: 1160px) {
+@media only screen and (max-width: 1200px) {
     .grid-container{
                display: grid;
                 grid-template-rows: 60vh 30vw;
