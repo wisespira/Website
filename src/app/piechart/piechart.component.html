@@ -1,9 +1,7 @@
 <div class="grid-container">
    <div class="grid-item pie" style="display: block;max-width: 70vw; ">
       <div style="display: block">
-         <div style="
-            text-align: center;
-            "><b>Skills</b> By # of Projects 🎯</div>
+         <div style=" text-align: center;" [innerHTML]="title"></div>
          <canvas baseChart 
          [data]="doughnutChartData"
          [labels]="doughnutChartLabels"
@@ -18,9 +16,9 @@
    Graphs 
   </button>
   <div class="dropdown-menu middle" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" (click)="changeGraph(1)">Skills by Project</a>
-    <a class="dropdown-item" (click)="changeGraph(2)">Skills by Language</a>
-    <a class="dropdown-item" (click)="changeGraph(3)">Soft skills example</a>
+    <a class="dropdown-item" (click)="changeGraph(0)">Skills by project</a>
+    <a class="dropdown-item" (click)="changeGraph(1)">Skills by language</a>
+    <a class="dropdown-item" (click)="changeGraph(2)">Soft skills example</a>
   </div>
 </div>
    </div>
