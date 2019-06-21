@@ -1,7 +1,9 @@
 import {
     Component,
-    OnInit
+    OnInit,
+    ViewChild
 } from '@angular/core';
+import { BaseChartDirective } from 'ng2-charts/ng2-charts';
 
 @Component({
     selector: 'app-piechart',
@@ -9,10 +11,11 @@ import {
     styleUrls: ['./piechart.component.scss']
 })
 export class PiechartComponent implements OnInit {
+    @ViewChild(BaseChartDirective) chart: BaseChartDirective;
 
     infoOnSelect: proj[] = [];
     selectedItem: string = "";
-    titles = ['<b>Skills</b> By # of Projects 🎯', '<b>Skills</b> By Language 📚', 'Soft Skills 🤹']
+    titles = ['<b>Skills</b> By # of Projects 🎯', '<b>Skills</b> By Language 📚', 'Soft Skills/taining 🤹']
     title = '';
     projectObjs: projectObjs[] = [{
             title: 'PWA/Angular',
@@ -161,6 +164,63 @@ export class PiechartComponent implements OnInit {
             }
         },
     ];
+    
+    softSkills: projectObjs[] = [{
+         title: 'Lecture/ Presentations',
+            num: 4,
+            colour: 'rgba(245, 133, 41,1)',
+            info: {
+                 projs: [{
+                    title: 'Push Notification Plugin',
+                    body: 'A plugin alowing wordpress posts to be fired at firebase by a content editor.'
+                }]
+            }
+    },{
+         title: 'Interviewer ',
+            num: 11,
+            colour: 'rgba(254, 218, 119,1)',
+            info: {
+                 projs: [{
+                    title: 'Push Notification Plugin',
+                    body: 'A plugin alowing wordpress posts to be fired at firebase by a content editor.'
+                }]
+            }
+    },{
+         title: 'Documeter',
+            num: 2,
+            colour: 'rgba(221, 42, 123,1)',
+            info: {
+                 projs: [{
+                    title: 'Push Notification Plugin',
+                    body: 'A plugin alowing wordpress posts to be fired at firebase by a content editor.'
+                }]
+            }
+    },{
+         title: 'Teamwork',
+            num: 3,
+            colour: 'rgba(129, 52, 175,1)',
+            info: {
+                 projs: [{
+                    title: 'Push Notification Plugin',
+                    body: 'A plugin alowing wordpress posts to be fired at firebase by a content editor.'
+                }]
+            }
+    },{
+         title: 'Other training',
+            num: 3,
+            colour: 'rgba(81, 91, 212,1)',
+            info: {
+                 projs: [{
+                    title: 'GDPR',
+                    body: 'A plugin alowing wordpress posts to be fired at firebase by a content editor.'
+                },
+                {
+                    title: 'Overcoming Unconscious Bias',
+                    body: 'A plugin alowing wordpress posts to be fired at firebase by a content editor.'
+                }]
+            }
+    }
+    ]
 
 
     constructor() {
@@ -170,6 +230,7 @@ export class PiechartComponent implements OnInit {
             this.doughnutChartData.push(this.projectObjs[i].num);
             this.pieChartColors[0].backgroundColor.push(this.projectObjs[i].colour);
         }
+     
     }
 
     changeGraph(a: any) {
@@ -196,7 +257,16 @@ export class PiechartComponent implements OnInit {
                 break;
             }
             case 2: {
+                 this.clearGraph();
                 this.title = this.titles[2];
+                for (let i = 0; i < this.softSkills.length; i++) {
+                    this.doughnutChartLabels.push(this.softSkills[i].title);
+                    console.log(this.doughnutChartLabels);
+                    this.doughnutChartData.push(this.softSkills[i].num);
+                    this.pieChartColors[0].backgroundColor.push(this.softSkills[i].colour);
+                    
+                }
+                console.log(this.chart.data);
                 break;
             }
             default: {
@@ -234,6 +304,7 @@ export class PiechartComponent implements OnInit {
             this.selectedItem = this.projectObjs[num].title;
             this.infoOnSelect = this.projectObjs[num].info.projs;
         }
+        console.log(this.chart.datasets);
 
 
     }
