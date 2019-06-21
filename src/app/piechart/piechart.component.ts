@@ -177,8 +177,8 @@ export class PiechartComponent implements OnInit {
 
         switch (a) {
             case 0: {
+                this.clearGraph();
                 this.title = this.titles[0];
-                this.doughnutChartData = this.projectObjs;
                 for (let i = 0; i < this.projectObjs.length; i++) {
                     this.doughnutChartLabels.push(this.projectObjs[i].title);
                     this.doughnutChartData.push(this.projectObjs[i].num);
@@ -187,9 +187,9 @@ export class PiechartComponent implements OnInit {
                 break;
             }
             case 1: {
+                this.clearGraph();
                 this.title = this.titles[1];
                 this.doughnutChartData = [this.projectObjs[0]];
-
                 this.doughnutChartLabels.push(this.projectObjs[0].title);
                 this.doughnutChartData.push(this.projectObjs[0].num);
                 this.pieChartColors[0].backgroundColor.push(this.projectObjs[0].colour);
@@ -207,6 +207,13 @@ export class PiechartComponent implements OnInit {
 
 
 
+    }
+    
+    private clearGraph(){
+        this.doughnutChartData = [];
+        this.doughnutChartLabels= [];
+        this.doughnutChartData=[];
+        this.pieChartColors[0].backgroundColor=[];
     }
 
     public doughnutChartLabels = [];
