@@ -171,6 +171,14 @@ projectObjs: projectObjs[] = [{
      
    changeGraph(a:any){
        console.log(a);
+       this.doughnutChartData = [this.projectObjs[0]];
+       
+         this.doughnutChartLabels.push(this.projectObjs[0].title); 
+            this.doughnutChartData.push(this.projectObjs[0].num);   
+            this.pieChartColors[0].backgroundColor.push(this.projectObjs[0].colour);
+       
+       
+       
    }  
      
   public doughnutChartLabels = [];
@@ -216,7 +224,8 @@ interface infomation {
     title:string,
     body:string,
     giff?:string,
-    showGiff?: boolean
+    showGiff?: boolean,
+    language?: string
  }
  
  
