@@ -23,8 +23,8 @@ alternate: boolean = true;
       colour: '#BEED53'
     },
    {
-      header: '1000 Stackoverflow rep ',
-      content: 'I set myself a goal to become an established user on StackOverflow. I achieved this with 50+ non-Wiki answers becoming top 5% in ionic 4 top and 10% ionic framework in answering questions with the respective tags.',
+      header: 'Stackoverflow ~ Established User',
+      content: 'I set myself a mini goal to become an established user on StackOverflow (1k rep). I achieved this with 50+ non-Wiki answers becoming top 5% in ionic 4 top and 10% ionic framework in answering questions with the respective tags.',
       date: 'SEP 2019',
        colour: '#FCC201'
     },

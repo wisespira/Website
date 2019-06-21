@@ -13,23 +13,34 @@
          (chartClick)="onChartClick($event)"
          ></canvas>
       </div>
+       <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   Graphs 
+  </button>
+  <div class="dropdown-menu middle" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" (click)="changeGraph(1)">Skills by Project</a>
+    <a class="dropdown-item" (click)="changeGraph(2)">Skills by Language</a>
+    <a class="dropdown-item" (click)="changeGraph(3)">Soft skills example</a>
+  </div>
+</div>
    </div>
    <div class="grid-item infoBox"  >
-      
-      <h2 *ngIf="!selectedItem" class="blink_me">Select a slice...</h2>
+     
+     
+         <div  class="scrolll"> <h2 *ngIf="!selectedItem" class="blink_me">Select a slice...</h2>
       <h2>{{selectedItem}}</h2>
       <br>
-         <div  class="scrolll">
       <div *ngFor="let proj of infoOnSelect; index as i" class="note">
    
          <hr>
-         <h4 style="font-size: 1.5rem">&#8226; {{proj.title}}</h4>
-         <p style="font-size: 1.2rem">{{proj.body}}<span class="blink_me_slower" *ngIf="proj.giff&&!proj.showGiff" style="color: blue; cursor: pointer;" (click)="showMore(i)"> show more...</span>
+         <h4 style="font-size: 1.25rem">&#8226; {{proj.title}}</h4>
+         <p style="font-size: 1.0rem">{{proj.body}}<span class="blink_me_slower" *ngIf="proj.giff&&!proj.showGiff" style="color: blue; cursor: pointer;" (click)="showMore(i)"> show more...</span>
          <span *ngIf="proj.giff&&proj.showGiff"   style="color: blue; cursor: pointer;" (click)="showMore(i)"> show less...</span></p>
          <div *ngIf="proj.giff&&proj.showGiff" class="note"><img src={{proj.giff}} ></div>
       </div>
       </div>
-   </div>
+
+     </div>
 </div>
 <!--style="position: absolute;margin-left: auto;margin-right: auto;/* left: 0; */right: 10%;top: 10%;"-->
 <!--  <div style="display: inline-block">-->

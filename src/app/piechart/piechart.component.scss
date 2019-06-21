@@ -55,7 +55,7 @@ h4{
 @media only screen and (max-width: 991px) {
     .grid-container{
                display: grid;
-                grid-template-rows: 35vh 10vw;
+                grid-template-rows: 50vh 20vw;
                 grid-template-columns: none;
     }
     .grid-item{
@@ -83,7 +83,9 @@ and (max-device-width : 480px) {
     }
 }
 
-
+.middle{
+        left: -50px !important;
+}
 
 
 

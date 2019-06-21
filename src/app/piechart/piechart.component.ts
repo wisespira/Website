@@ -169,7 +169,9 @@ projectObjs: projectObjs[] = [{
         }
      }
      
-     
+   changeGraph(a:any){
+       console.log(a);
+   }  
      
   public doughnutChartLabels = [];
   public doughnutChartData = [];
