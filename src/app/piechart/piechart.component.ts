@@ -90,7 +90,7 @@ export class PiechartComponent implements OnInit {
             info: {
                 projs: [{
                     title: 'Atresia Messenger backend',
-                    body: 'Messenger App backend.'
+                    body: 'Used as Messenger App backend as I wanted the messages to be as fast as posible.'
                 }]
             }
         },
@@ -125,7 +125,7 @@ export class PiechartComponent implements OnInit {
             }
         },
         {
-            title: 'WPF',
+            title: '.NET Framework/WPF',
             num: 3,
             colour: 'rgba(87, 232, 107,1)',
             info: {
@@ -166,14 +166,20 @@ export class PiechartComponent implements OnInit {
     ];
     
     softSkills: projectObjs[] = [{
-         title: 'Lecture/ Presentations',
+         title: 'Presentations',
             num: 2,
             colour: 'rgba(245, 133, 41,1)',
             info: {
                  projs: [{
-                    title: 'Push Notification Plugin',
-                    body: 'A plugin alowing wordpress posts to be fired at firebase by a content editor.'
-                }]
+                    title: 'Lectured on my role at NUIT',
+                    body: ''
+                },{
+                    title: 'Trade Fairs',
+                    body: 'As part of my second year team project I ran a stand showing/explaining our application to people in industry.'
+                },
+                
+                
+                ]
             }
     },{
          title: 'Interviewer ',
@@ -181,8 +187,8 @@ export class PiechartComponent implements OnInit {
             colour: 'rgba(254, 218, 119,1)',
             info: {
                  projs: [{
-                    title: 'Push Notification Plugin',
-                    body: 'A plugin alowing wordpress posts to be fired at firebase by a content editor.'
+                    title: 'NUIT Placment',
+                    body: 'Interviewed a dozen students for the applications developer role.'
                 }]
             }
     },{
@@ -191,9 +197,14 @@ export class PiechartComponent implements OnInit {
             colour: 'rgba(221, 42, 123,1)',
             info: {
                  projs: [{
-                    title: 'Push Notification Plugin',
-                    body: 'A plugin alowing wordpress posts to be fired at firebase by a content editor.'
-                }]
+                    title: 'Handover Documentation',
+                    body: 'I created documention for all services I was in charge of at NUIT to ensure that new placments could easly take over.'
+                },
+              {
+                    title: 'Requirements+Risk analysis  Doc',
+                    body: 'I created requirements+risk analysis documention both at NUIT (multipul projects) and at university.'
+                },
+                
             }
     },{
          title: 'Teamwork',
@@ -201,9 +212,13 @@ export class PiechartComponent implements OnInit {
             colour: 'rgba(129, 52, 175,1)',
             info: {
                  projs: [{
-                    title: 'Push Notification Plugin',
-                    body: 'A plugin alowing wordpress posts to be fired at firebase by a content editor.'
-                }]
+                    title: 'Agile Methodology',
+                    body: "I'm comfortable working with the agile methodology after applying its principles while at NUIT."
+                },
+               {
+                    title: 'General',
+                    body: "I've worked In a hole host of teams most notably taking a lead developer role in my university team project and lead in increasing acsessibilty within University APP."
+                }
             }
     },{
          title: 'Other training',
@@ -227,8 +242,8 @@ export class PiechartComponent implements OnInit {
             colour: 'rgba(42, 245, 152,1)',
             info: {
                  projs: [{
-                    title: 'Push Notification Plugin',
-                    body: 'A plugin alowing wordpress posts to be fired at firebase by a content editor.'
+                    title: 'Cron Jobs + Pm2 + Apache Config',
+                    body: 'While working at Newcastle uni I set up many systems which relied on a Linux based server.'
                 }]
             }
     },{
@@ -248,7 +263,7 @@ export class PiechartComponent implements OnInit {
             info: {
                  projs: [{
                     title: 'Student Attendence Scanners',
-                    body: 'Setting up DHCP'
+                    body: 'Setting up DHCP so that new scanners pluged into the network would get an ip and config'
                 }]
             }
     },{
@@ -257,9 +272,16 @@ export class PiechartComponent implements OnInit {
             colour: 'rgba(252, 194, 1,1)',
             info: {
                  projs: [{
-                    title: 'Student Attendence Scanners',
-                    body: 'Setting up DHCP'
-                }]
+                    title: 'Personal Website',
+                    body: 'Hosted on firebase'
+                },
+                {
+                    title: 'Newcastle uni App',
+                    body: 'Used Analytics, FCM'
+                },{
+                    title: 'Other',
+                    body: 'Firebase is my default for setting up an easy back end'
+                },]
             }
     },{
          title: 'PM2 (express)',
@@ -267,8 +289,8 @@ export class PiechartComponent implements OnInit {
             colour: 'rgba(191, 28, 43,1)',
             info: {
                  projs: [{
-                    title: 'Student Attendence Scanners',
-                    body: 'Setting up DHCP'
+                    title: 'Newcastle Uni App',
+                    body: 'Process manager for notifications and other mobile services which I worked on, mostly used for logrotation.'
                 }]
             }
     },{
@@ -277,8 +299,8 @@ export class PiechartComponent implements OnInit {
             colour: 'rgba(250, 249, 246,1)',
             info: {
                  projs: [{
-                    title: 'Student Attendence Scanners',
-                    body: 'Setting up DHCP'
+                    title: 'Microsoft teams  ',
+                    body: 'Setting up hosting, app services and congnitive services (LUIS) for the Newcastle Uni bot.'
                 }]
             }
     },{
@@ -287,8 +309,8 @@ export class PiechartComponent implements OnInit {
             colour: 'rgba(177, 240, 240,1)',
             info: {
                  projs: [{
-                    title: 'Student Attendence Scanners',
-                    body: 'Setting up DHCP'
+                    title: 'Exams for Libary App',
+                    body: 'Used Microsoft SQL sever managment to run SQL procedures for student infomation. This info was primarly used in libary desktop app.'
                 }]
             }
     },];
