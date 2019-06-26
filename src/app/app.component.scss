@@ -92,6 +92,7 @@ and (max-device-width : 480px) {
     border-right: .15em solid orange;
   }
   100% {
+        opacity: 1;
     border: none;
   }
 }
