@@ -15,7 +15,7 @@ export class PiechartComponent implements OnInit {
 
     infoOnSelect: proj[] = [];
     selectedItem: string = "";
-    titles = ['<b>Skills</b> By # of Projects 🎯', '<b>Skills</b> By Language/Tec 📚', 'Soft Skills/taining 🤹']
+    titles = ['<b>Skills</b> By # of Projects 🎯', 'Backend Tec used 📚', 'Soft Skills/taining 🤹', 'All Skills 🕺']
     title = '';
     projectObjs: projectObjs[] = [{
             title: 'PWA/Angular',
@@ -167,7 +167,7 @@ export class PiechartComponent implements OnInit {
     
     softSkills: projectObjs[] = [{
          title: 'Lecture/ Presentations',
-            num: 4,
+            num: 2,
             colour: 'rgba(245, 133, 41,1)',
             info: {
                  projs: [{
@@ -177,7 +177,7 @@ export class PiechartComponent implements OnInit {
             }
     },{
          title: 'Interviewer ',
-            num: 11,
+            num: 1,
             colour: 'rgba(254, 218, 119,1)',
             info: {
                  projs: [{
@@ -207,7 +207,7 @@ export class PiechartComponent implements OnInit {
             }
     },{
          title: 'Other training',
-            num: 3,
+            num: 2,
             colour: 'rgba(81, 91, 212,1)',
             info: {
                  projs: [{
@@ -223,8 +223,8 @@ export class PiechartComponent implements OnInit {
     ];
      tecSkills: projectObjs[] = [{
          title: 'Linux+Vim',
-            num: 4,
-            colour: 'rgba(122, 173, 160,1)',
+            num: 3,
+            colour: 'rgba(42, 245, 152,1)',
             info: {
                  projs: [{
                     title: 'Push Notification Plugin',
@@ -233,8 +233,8 @@ export class PiechartComponent implements OnInit {
             }
     },{
          title: 'Apache Sever',
-            num: 4,
-            colour: 'rgba(113, 152, 169,1)',
+            num: 1,
+            colour: 'rgba(253, 136, 224,1)',
             info: {
                  projs: [{
                     title: 'Push Notification Plugin',
@@ -243,8 +243,8 @@ export class PiechartComponent implements OnInit {
             }
     },{
          title: 'Network Programing',
-            num: 4,
-            colour: 'rgba(142, 128, 169,1)',
+            num: 1,
+            colour: 'rgba(75, 157, 125,1)',
             info: {
                  projs: [{
                     title: 'Student Attendence Scanners',
@@ -253,8 +253,18 @@ export class PiechartComponent implements OnInit {
             }
     },{
          title: 'Firebase',
-            num: 4,
-            colour: 'rgba(216, 149, 163,1)',
+            num: 5,
+            colour: 'rgba(252, 194, 1,1)',
+            info: {
+                 projs: [{
+                    title: 'Student Attendence Scanners',
+                    body: 'Setting up DHCP'
+                }]
+            }
+    },{
+         title: 'PM2 (express)',
+            num: 1,
+            colour: 'rgba(191, 28, 43,1)',
             info: {
                  projs: [{
                     title: 'Student Attendence Scanners',
@@ -263,8 +273,8 @@ export class PiechartComponent implements OnInit {
             }
     },{
          title: 'Azure',
-            num: 4,
-            colour: 'rgba(225, 171, 139,1)',
+            num: 1,
+            colour: 'rgba(250, 249, 246,1)',
             info: {
                  projs: [{
                     title: 'Student Attendence Scanners',
@@ -273,30 +283,30 @@ export class PiechartComponent implements OnInit {
             }
     },{
          title: 'SQL sever managment',
-            num: 4,
-            colour: 'rgba(170, 169, 131,1)',
+            num: 1,
+            colour: 'rgba(177, 240, 240,1)',
             info: {
                  projs: [{
                     title: 'Student Attendence Scanners',
                     body: 'Setting up DHCP'
                 }]
             }
-    }];
+    },];
     
     
     
 
 
     constructor() {
-        this.title = this.titles[0];
-        for (let i = 0; i < this.projectObjs.length; i++) {
-            this.doughnutChartLabels.push(this.projectObjs[i].title);
-            this.doughnutChartData.push(this.projectObjs[i].num);
-            this.pieChartColors[0].backgroundColor.push(this.projectObjs[i].colour);
+        this.title = this.titles[3];
+        for (let i = 0; i < this.arrayAll.length; i++) {
+            this.doughnutChartLabels.push(this.arrayAll[i].title);
+            this.doughnutChartData.push(this.arrayAll[i].num);
+            this.pieChartColors[0].backgroundColor.push(this.arrayAll[i].colour);
         }
      
     }
-
+    arrayAll: projectObjs[]  = this.projectObjs.concat(this.softSkills,this.tecSkills);
     changeGraph(a: any) {
     //    console.log(a);
 
@@ -329,7 +339,22 @@ export class PiechartComponent implements OnInit {
                  //   console.log(this.doughnutChartLabels);
                     this.doughnutChartData.push(this.softSkills[i].num);
                     this.pieChartColors[0].backgroundColor.push(this.softSkills[i].colour);
-                    console.log([  this.doughnutChartData,this.doughnutChartLabels,this.pieChartColors[0].backgroundColor]) 
+                  
+                    
+                }
+                 break;
+            }
+            case 3: {
+                 this.clearGraph();
+                this.title = this.titles[3];
+               // let arrayAll: projectObjs[]  = this.softSkills.concat(this.tecSkills,this.projectObjs );
+                //console.log(arrayAll);
+                for (let i = 0; i < this.arrayAll.length; i++) {
+                    this.doughnutChartLabels.push(this.arrayAll[i].title);
+                 //   console.log(this.doughnutChartLabels);
+                    this.doughnutChartData.push(this.arrayAll[i].num);
+                    this.pieChartColors[0].backgroundColor.push(this.arrayAll[i].colour);
+                    
                     
                 }
                 //this.chart.labels= this.doughnutChartLabels;
@@ -379,6 +404,10 @@ export class PiechartComponent implements OnInit {
              if(this.title == this.titles[2]){
             this.selectedItem = this.softSkills[num].title;
             this.infoOnSelect = this.softSkills[num].info.projs;
+             }
+              if(this.title == this.titles[3]){
+            this.selectedItem = this.arrayAll[num].title;
+            this.infoOnSelect = this.arrayAll[num].info.projs;
              }
           
         }
