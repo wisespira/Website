@@ -15,7 +15,7 @@ export class PiechartComponent implements OnInit {
 
     infoOnSelect: proj[] = [];
     selectedItem: string = "";
-    titles = ['<b>Skills</b> By # of Projects 🎯', 'Backend Tec used 📚', 'Soft Skills/taining 🤹', 'All Skills 🕺']
+    titles = ['<b>Skills</b> By # of Projects 🎯', 'Backend tech used 📚', 'Soft Skills/taining 🤹', 'All Skills 🕺']
     title = '';
     projectObjs: projectObjs[] = [{
             title: 'PWA/Angular',
@@ -203,8 +203,8 @@ export class PiechartComponent implements OnInit {
               {
                     title: 'Requirements+Risk analysis  Doc',
                     body: 'I created requirements+risk analysis documention both at NUIT (multipul projects) and at university.'
-                },
-                
+                }
+                 ]
             }
     },{
          title: 'Teamwork',
@@ -219,6 +219,7 @@ export class PiechartComponent implements OnInit {
                     title: 'General',
                     body: "I've worked In a hole host of teams most notably taking a lead developer role in my university team project and lead in increasing acsessibilty within University APP."
                 }
+                 ]
             }
     },{
          title: 'Other training',
