@@ -3,7 +3,7 @@ import {
     OnInit,
     ViewChild
 } from '@angular/core';
-import { BaseChartDirective } from 'ng2-charts/ng2-charts';
+//import { BaseChartDirective } from 'ng2-charts/ng2-charts';
 
 @Component({
     selector: 'app-piechart',
@@ -11,7 +11,7 @@ import { BaseChartDirective } from 'ng2-charts/ng2-charts';
     styleUrls: ['./piechart.component.scss']
 })
 export class PiechartComponent implements OnInit {
-    @ViewChild(BaseChartDirective) chart: BaseChartDirective;
+//    @ViewChild(BaseChartDirective) chart: BaseChartDirective;
 
     infoOnSelect: proj[] = [];
     selectedItem: string = "";
@@ -234,7 +234,7 @@ export class PiechartComponent implements OnInit {
     }
 
     changeGraph(a: any) {
-        console.log(a);
+    //    console.log(a);
 
         switch (a) {
             case 0: {
@@ -261,12 +261,14 @@ export class PiechartComponent implements OnInit {
                 this.title = this.titles[2];
                 for (let i = 0; i < this.softSkills.length; i++) {
                     this.doughnutChartLabels.push(this.softSkills[i].title);
-                    console.log(this.doughnutChartLabels);
+                 //   console.log(this.doughnutChartLabels);
                     this.doughnutChartData.push(this.softSkills[i].num);
                     this.pieChartColors[0].backgroundColor.push(this.softSkills[i].colour);
+                    console.log([  this.doughnutChartData,this.doughnutChartLabels,this.pieChartColors[0].backgroundColor]) 
                     
                 }
-                console.log(this.chart.data);
+                //this.chart.labels= this.doughnutChartLabels;
+              //  console.table(this.chart);
                 break;
             }
             default: {
@@ -282,7 +284,6 @@ export class PiechartComponent implements OnInit {
     private clearGraph(){
         this.doughnutChartData = [];
         this.doughnutChartLabels= [];
-        this.doughnutChartData=[];
         this.pieChartColors[0].backgroundColor=[];
     }
 
@@ -298,13 +299,13 @@ export class PiechartComponent implements OnInit {
 
 
     onChartClick(event) {
-        console.log(event)
+     //   console.log(event)
         if (event.active[0]) {
             let num = Number(event.active[0]._index);
             this.selectedItem = this.projectObjs[num].title;
             this.infoOnSelect = this.projectObjs[num].info.projs;
         }
-        console.log(this.chart.datasets);
+       // console.log(this.chart.datasets);
 
 
     }
