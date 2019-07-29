@@ -17,7 +17,7 @@
          &nbsp;	(ﾉ◕ヮ◕)ﾉ*:・ﾟ✧
       </p>
    </div>
-   <div class="warning blink_me">WARNING do not hit the balls</div>
+   <div class="warning blink_me" *ngIf="!phone">WARNING do not hit the balls</div>
 </div>
 <div class="section">
    <app-piechart></app-piechart>

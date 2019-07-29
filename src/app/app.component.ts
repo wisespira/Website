@@ -1,6 +1,6 @@
 import { Component, ViewChild, ElementRef, HostListener } from "@angular/core";
 import * as THREE from "three";
-
+import { DeviceDetectorService } from 'ngx-device-detector';
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
@@ -10,6 +10,8 @@ export class AppComponent {
   config: any;
   fullpage_api: any;
   @ViewChild("rendererContainer") rendererContainer: ElementRef;
+  /*had to add because of hackin */
+  @HostListener('touchmove', ['$event']) onClick(e) {console.log(e) }
 
   @HostListener("window:resize", ["$event"])
   onWindowResize(event) {
@@ -50,10 +52,17 @@ export class AppComponent {
   meshArray = [];
   numOfSquares = 18;
   ship;
-  constructor() {
+  phone = false;
+  deviceInfo = null;
+  constructor(private deviceService: DeviceDetectorService) {
+    this.deviceInfo = this.deviceService.getDeviceInfo();
+    console.log(this.deviceInfo);
+    if(this.deviceInfo.os == 'Mac'||this.deviceInfo.os == 'Windows'){
+        this.phone = false;
+    }else{this.phone = true; }
+    console.log(this.phone);
     this.config = {
-      // fullpage options
-      dragAndMove: "mouseonly",
+      dragAndMove: false,
       licenseKey: "451ECC33-310547B3-A0579CA3-5B8D3406",
       anchors: [
         "Home",

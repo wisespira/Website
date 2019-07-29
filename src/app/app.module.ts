@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { DeviceDetectorModule } from 'ngx-device-detector';
 import { ChartsModule } from 'ng2-charts';
 //import { MaterialModule } from './material.module';
 import { AngularFullpageModule } from '@fullpage/angular-fullpage';
@@ -37,7 +37,8 @@ import { FormsModule }   from '@angular/forms';
    // MaterialModule,
   AppRoutingModule,
   AngularFullpageModule,
-  ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }) 
+  ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+  DeviceDetectorModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
