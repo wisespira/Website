@@ -9,10 +9,12 @@
 }
 .navbar-brand{
 margin: auto;
-font-size: 1.5rem;
+font-size: 1.25rem !important;
 
 }
-
+.nav-item:hover{
+    color: #A9A9A9 !important;
+}
 
 .navbar-nav {
     float: right;
@@ -32,7 +34,12 @@ and (min-device-width : 320px)
 and (max-device-width : 480px) {
 
     .navbar-brand{
-            padding-left: 56px;
+            padding-left: 0px;
+            margin-left: 0px;
+            font-size: 1rem;
+            span{
+                font-size: 0.7rem !important;
+            }
     }
     
     

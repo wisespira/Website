@@ -37,7 +37,7 @@ top: 17.5vh;
 .grid-item {
 
 
-  font-size: 20px;
+  font-size: 1rem;
   text-align: center;
 }
 
@@ -59,6 +59,9 @@ top: 17.5vh;
     }
     .contact{
         padding: 5px;
+    }
+    .remove{
+        display: none;
     }
 }
 .viewer{

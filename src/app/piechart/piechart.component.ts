@@ -23,7 +23,7 @@ export class PiechartComponent implements OnInit {
             colour: 'rgba(0, 122, 168,1)',
             info: {
                 projs: [{
-                    title: 'Porfolio Website ;)',
+                    title: 'Porfolio Website',
                     body: 'The website your viewing code on Github link down below',
                     giff: 'https://raw.githubusercontent.com/wisespira/Website/master/its%20the%20giff.gif',
                     showGiff: true
@@ -40,7 +40,9 @@ export class PiechartComponent implements OnInit {
             info: {
                 projs: [{
                     title: 'Newcastle Uni App',
-                    body: 'I developed and deployed multiple releases for the app on android and ios.'
+                    body: 'I developed and deployed multiple releases for the app on android and ios. This included large updates on accessibility, push notifications, exams systems as well as app-wide framework plugin, dependencies, and polyfill updates.',
+                    giff: 'assets/percy.png',
+                    showGiff: true
                 }, {
                     title: 'Peseptron App',
                     body: 'My first ionic app I created mostly to test/learn about the framework. I implemented the p5js library to graphically show the learning process of a basic neural network.',
@@ -59,7 +61,7 @@ export class PiechartComponent implements OnInit {
             info: {
                 projs: [{
                     title: 'Atresia',
-                    body: 'A hybrid messenger app, currently under development.'
+                    body: 'A hybrid messenger app, currently under development using firebase to host the backend. I will be using the WebSockets communication protocol to create the fastest, reliable, real-time messaging experience possible.'
                 }, {
                     title: 'What2Make',
                     body: 'Creates a recipe based on ingredient inputs.'

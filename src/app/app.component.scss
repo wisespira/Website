@@ -6,14 +6,24 @@ canvas{
 and (min-device-width : 320px) 
 and (max-device-width : 480px) {
     css-typing p{
-            font-size: 1.25rem !important;
+            font-size: 0.8rem !important;
     }
     .garry{
-        font-size: 1.25rem !important;
+        font-size: 0.8rem !important;
     }
 
     
     
+}
+
+.blink_me {
+  animation: blinker 3s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
 
 .css-typing{
@@ -27,14 +37,14 @@ and (max-device-width : 480px) {
   pointer-events: none;
   border-right: .15em solid orange;
  // font-family: "Courier";
-  font-size: 2rem;
+  font-size: 1.5rem;
   //color: rgba(255,255,255,.75);
   font-family: 'Anonymous Pro', monospace;  
   white-space: nowrap;
   overflow: hidden;
 }
 .css-typing p:nth-child(1) {
-  width: 15em;
+  width: 20em;
   opacity: 0;
   -webkit-animation: type 2s steps(40, end);
   animation: type 2s steps(40, end);
@@ -44,23 +54,33 @@ and (max-device-width : 480px) {
 }
 
 .css-typing p:nth-child(2) {
-  width: 17em;
+  width: 30em;
   opacity: 0;
-  -webkit-animation: type2 2s steps(40, end);
-  animation: type2 2s steps(40, end);
+  -webkit-animation: type2 3s steps(60, end);
+  animation: type2 3s steps(60, end);
   -webkit-animation-delay: 2s;
   animation-delay: 3s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-
 .css-typing p:nth-child(3) {
+  width: 17em;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(40, end);
+  animation: type2 2s steps(40, end);
+  -webkit-animation-delay: 5s;
+  animation-delay: 6s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(4) {
   width: 12em;
   opacity: 0;
   -webkit-animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
   animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
-  -webkit-animation-delay: 4s;
-  animation-delay: 5s;
+  -webkit-animation-delay: 6s;
+  animation-delay: 7s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -162,4 +182,11 @@ and (max-device-width : 480px) {
   50% {
     border-color: tranparent;
   }
+}
+
+
+.warning{
+    font-size: 0.75rem;
+    position: absolute;
+    bottom: 0;
 }

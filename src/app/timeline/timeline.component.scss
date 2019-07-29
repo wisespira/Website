@@ -1,6 +1,6 @@
 .timeline{
     overflow-y: auto;max-height: 80vh;max-width: 80vw;margin: auto;
-    
+    margin-top: 30px;
 }
 .primary{
     background: #a0a;
@@ -22,4 +22,8 @@ and (max-device-width : 480px) {
   50% {
     opacity: 0;
   }
+}
+
+h2{
+    font-size: 1.5rem;
 }

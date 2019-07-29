@@ -2,7 +2,7 @@
    <div class="grid-item pie" style="display: block;max-width: 70vw; ">
       <div style="display: block">
          <div>
-            <div style=" text-align: center; display: inline-block; padding-left: 45px;+" [innerHTML]="title"></div>
+            <div style=" text-align: center;font-size: 1.5rem;display: inline-block; padding-left: 45px;+" [innerHTML]="title"></div>
             <div class="dropdown">
                <button class="btn dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                </button>
@@ -31,8 +31,8 @@
          <br>
          <div *ngFor="let proj of infoOnSelect; index as i" class="note">
             <hr>
-            <h4 style="font-size: 1.25rem">&#8226; {{proj.title}}</h4>
-            <p style="font-size: 1.0rem">{{proj.body}}<span class="blink_me_slower" *ngIf="proj.giff&&!proj.showGiff" style="color: blue; cursor: pointer;" (click)="showMore(i)"> show more...</span>
+            <h4 style="font-size: 1.0rem">&#8226; {{proj.title}}</h4>
+            <p style="font-size: 0.8rem">{{proj.body}}<span class="blink_me_slower" *ngIf="proj.giff&&!proj.showGiff" style="color: blue; cursor: pointer;" (click)="showMore(i)"> show more...</span>
                <span *ngIf="proj.giff&&proj.showGiff"   style="color: blue; cursor: pointer;" (click)="showMore(i)"> show less...</span>
             </p>
             <div *ngIf="proj.giff&&proj.showGiff" class="note"><img src={{proj.giff}} ></div>

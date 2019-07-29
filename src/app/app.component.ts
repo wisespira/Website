@@ -48,12 +48,13 @@ export class AppComponent {
   scene = null;
   camera = null;
   meshArray = [];
-  numOfSquares = 15;
-
+  numOfSquares = 18;
+  ship;
   constructor() {
     this.config = {
       // fullpage options
-      licenseKey: "YOUR LICENSE KEY HERE",
+      dragAndMove: "mouseonly",
+      licenseKey: "451ECC33-310547B3-A0579CA3-5B8D3406",
       anchors: [
         "Home",
         "Skills",
@@ -85,15 +86,27 @@ export class AppComponent {
     );
     this.camera.position.z = 1000;
 
-    const geometry = new THREE.IcosahedronGeometry(100, 0);
-    // console.log(typeof 0xff0000);
+    const geometry = new THREE.IcosahedronGeometry(90, 0);
+    let material =  new THREE.MeshNormalMaterial();
+    
+  /*  let Shipmaterial =  new THREE.MeshNormalMaterial({'wireframe':true});
+    let shipGeometry = new THREE.ConeGeometry( 40, 160, 256 );
+    Shipmaterial.wireframe = false;
+     Shipmaterial.depthFunc = 1;
+    var cone = new THREE.Mesh( shipGeometry, Shipmaterial );
+    cone.position.x = (Math.random() - 0.5) * window.innerWidth;
+    cone.position.y = (Math.random() - 0.5) * window.innerHeight;
+    cone.position.z = 150;
+    console.log(cone);
+    cone.rotation.y = 50;
+    this.scene.add( cone );
+    */
 
     for (var i = 0; i < this.numOfSquares; i++) {
-      let material =  new THREE.MeshNormalMaterial();
       //    let material = new THREE.MeshBasicMaterial({color: Math.floor(Math.random()*16777215), wireframe: true});
       var mesh = new THREE.Mesh(geometry, material);
-      mesh.position.x = (Math.random() - 0.5) * window.innerWidth;
-      mesh.position.y = (Math.random() - 0.5) * window.innerHeight;
+      mesh.position.x = (Math.random() * (2) -1) * window.innerWidth;
+      mesh.position.y = (Math.random() * (2) -1) * window.innerHeight;
       mesh.position.z = (Math.random() - 0.5) * 500;
 
       let vector = [
@@ -162,18 +175,18 @@ this.meshArray[i]["mesh"].vector[0] = this.meshArray[i]["mesh"].vector[0]*0.995;
 this.meshArray[i]["mesh"].vector[1] = this.meshArray[i]["mesh"].vector[1]*0.995;
 }
      
-       if(this.meshArray[i]["mesh"].position.y > window.innerHeight / 1.5){this.meshArray[i]["mesh"].position.y--;}
-       if(  this.meshArray[i]["mesh"].position.y < -(window.innerHeight / 1.5)){this.meshArray[i]["mesh"].position.y++;}
+       if(this.meshArray[i]["mesh"].position.y > window.innerHeight*0.9 ){this.meshArray[i]["mesh"].position.y--;}
+       if(  this.meshArray[i]["mesh"].position.y < -(window.innerHeight*0.9)){this.meshArray[i]["mesh"].position.y++;}
        
       if (
-        this.meshArray[i]["mesh"].position.x > window.innerWidth / 1.5 ||
-        this.meshArray[i]["mesh"].position.x < -(window.innerWidth / 1.5)
+        this.meshArray[i]["mesh"].position.x > window.innerWidth*0.9||
+        this.meshArray[i]["mesh"].position.x < -(window.innerWidth*0.9)
       ) {
        this.meshArray[i]["mesh"].vector[0] = -this.meshArray[i]["mesh"].vector[0];
       }
       if (
-        this.meshArray[i]["mesh"].position.y > window.innerHeight / 1.5 ||
-        this.meshArray[i]["mesh"].position.y < -(window.innerHeight / 1.5)
+        this.meshArray[i]["mesh"].position.y > window.innerHeight*0.9 ||
+        this.meshArray[i]["mesh"].position.y < -(window.innerHeight*0.9)
       ) {
         this.meshArray[i]["mesh"].vector[1]= -this.meshArray[i]["mesh"].vector[1];
       }
