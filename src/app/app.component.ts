@@ -111,6 +111,10 @@ export class AppComponent {
     this.scene.add( cone );
     */
 
+    let exstra = 0;
+    if(this.phone){exstra = 4}else{exstra = 0}
+    this.numOfSquares = Math.floor((window.innerWidth*window.innerHeight)/100000)+exstra;
+
     for (var i = 0; i < this.numOfSquares; i++) {
       //    let material = new THREE.MeshBasicMaterial({color: Math.floor(Math.random()*16777215), wireframe: true});
       var mesh = new THREE.Mesh(geometry, material);
@@ -184,8 +188,9 @@ this.meshArray[i]["mesh"].vector[0] = this.meshArray[i]["mesh"].vector[0]*0.995;
 this.meshArray[i]["mesh"].vector[1] = this.meshArray[i]["mesh"].vector[1]*0.995;
 }
      
-       if(this.meshArray[i]["mesh"].position.y > window.innerHeight*0.9 ){this.meshArray[i]["mesh"].position.y--;}
-       if(  this.meshArray[i]["mesh"].position.y < -(window.innerHeight*0.9)){this.meshArray[i]["mesh"].position.y++;}
+   
+       //if(this.meshArray[i]["mesh"].position.y > window.innerHeight*0.9 ){this.meshArray[i]["mesh"].position.y--;}
+     //  if(  this.meshArray[i]["mesh"].position.y < -(window.innerHeight*0.9)){this.meshArray[i]["mesh"].position.y++;}
        
       if (
         this.meshArray[i]["mesh"].position.x > window.innerWidth*0.9||
