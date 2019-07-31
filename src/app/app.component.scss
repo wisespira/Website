@@ -15,7 +15,19 @@ and (max-device-width : 480px) {
     
     
 }
+.pointers{
+    
+    pointer-events: all;
+    cursor: pointer;
+    padding: 5px;
+      -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
 
+}
 .blink_me {
   animation: blinker 3s linear infinite;
 }
@@ -42,6 +54,12 @@ and (max-device-width : 480px) {
   font-family: 'Anonymous Pro', monospace;  
   white-space: nowrap;
   overflow: hidden;
+        -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
 }
 .css-typing p:nth-child(1) {
   width: 20em;

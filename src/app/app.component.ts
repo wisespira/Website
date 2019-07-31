@@ -49,6 +49,7 @@ export class AppComponent {
   renderer = new THREE.WebGLRenderer();
   scene = null;
   camera = null;
+  /*should have used scene array :( */
   meshArray = [];
   numOfSquares = 18;
   ship;
@@ -137,13 +138,13 @@ export class AppComponent {
       this.scene.add(mesh);
     }
 
-    var light = new THREE.PointLight(0xadd8e6, 1, 2000);
+    /*var light = new THREE.PointLight(0xadd8e6, 1, 2000);
     light.position.set(0, 0, 205);
     this.scene.add(light);
 
     var light = new THREE.PointLight(0xffff00, 2, 750);
     light.position.set(0, 0, 25);
-    this.scene.add(light);
+    this.scene.add(light);*/
   }
 
   getRef(fullPageRef) {
@@ -157,6 +158,49 @@ export class AppComponent {
     this.scene.background = new THREE.Color( 0xffffff );
     this.animate();
   }
+  
+  addBall(){
+      console.log(this.meshArray)
+      if(this.meshArray.length<=50){
+      const geometry = new THREE.IcosahedronGeometry(90, 0);
+      let material =  new THREE.MeshNormalMaterial();
+      var mesh = new THREE.Mesh(geometry, material);
+      mesh.position.x = (Math.random() * (2) -1) * window.innerWidth;
+      mesh.position.y = (Math.random() * (2) -1) * window.innerHeight;
+      mesh.position.z = (Math.random() - 0.5) * 500;
+
+      let vector = [
+        -1 + Math.floor(Math.random() * 3),
+        -1 + Math.floor(Math.random() * 3)
+      ];
+      //console.log(vector);
+      mesh.position.x;
+      mesh.position.y;
+      // WHY IS THIS ALLOWED BUT NOT mesh.vector ?!?!??!?
+      mesh['vector'] = vector;
+ 
+      this.meshArray.push({ mesh, vector });
+      mesh.translateY(40);
+      this.scene.add(mesh);}
+  }
+  minusBall(){
+      if (this.meshArray.length>0&&this.scene.children.length>0){
+          if(this.scene.children>0){
+      console.log(this.meshArray);
+       console.log(this.scene.children);
+      let uuid = this.meshArray[0].mesh.uuid;
+      this.meshArray.shift(); 
+
+      this.scene.children = this.scene.children.filter(function(value, index, arr){
+      return value.uuid != uuid;
+    });
+          }else{
+               this.scene.children.shift(); 
+          }
+        }
+  }
+  
+  
     mousePositionOld =[0,0];
     mousePositionNew = [];
     mounseVel = [];
@@ -173,7 +217,7 @@ export class AppComponent {
     }
   
    // console.log(this.mounseVel);  could be simplified when done 
-    for (var i = 0; i < this.numOfSquares; i++) {
+      for (var i = 0; i < this.meshArray.length; i++) {
     
       this.meshArray[i]["mesh"].rotation.x += 0.01;
       this.meshArray[i]["mesh"].rotation.y += 0.02;
