@@ -14,7 +14,7 @@
           who loves to develop software and fun interfaces
       </p>
       <p class="garry">
-         &nbsp;	(ﾉ◕ヮ◕)ﾉ*:・ﾟ✧ <i class="pointers" (click)="addBall()"style="color: red;">+</i><i class="pointers"(click)="minusBall()"style="color: blue;">-</i>
+         &nbsp;	(ﾉ◕ヮ◕)ﾉ*:・ﾟ✧ <i *ngIf="!phone" class="pointers" (click)="addBall()"style="color: red;">+</i><i *ngIf="!phone" class="pointers"(click)="minusBall()"style="color: blue;">-</i>
       </p>
    </div>
    <div class="warning blink_me" *ngIf="!phone">WARNING do not hit the balls</div>

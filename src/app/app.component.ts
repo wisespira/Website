@@ -165,8 +165,8 @@ export class AppComponent {
       const geometry = new THREE.IcosahedronGeometry(90, 0);
       let material =  new THREE.MeshNormalMaterial();
       var mesh = new THREE.Mesh(geometry, material);
-      mesh.position.x = (Math.random() * (2) -1) * window.innerWidth;
-      mesh.position.y = (Math.random() * (2) -1) * window.innerHeight;
+      mesh.position.x = (Math.random() * (2) -1) * window.innerWidth*0.75;
+      mesh.position.y = (Math.random() * (2) -1) * window.innerHeight*0.75;
       mesh.position.z = (Math.random() - 0.5) * 500;
 
       let vector = [

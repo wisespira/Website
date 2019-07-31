@@ -28,6 +28,12 @@ top: 17.5vh;
  
 
 }
+
+.grid-container2{
+     display: grid;
+                grid-template-rows: 40vh auto;
+                grid-template-columns: none;
+}
 .download{
  
     text-align: left !important;
@@ -63,6 +69,11 @@ top: 17.5vh;
     .remove{
         display: none;
     }
+    
+        #about{
+            display: none !important;
+        }
+    
 }
 .viewer{
     display: inline-block;
