@@ -30,7 +30,7 @@ alternate: boolean = true;
     },
     {
       header: 'Applications Developer Placement (NUIT)',
-      content: 'My first role as a full-time developer, where I worked primarily with WordPress, Ionic/Angular, WPF/.NET Framework, node express, and Microsoft teams development',
+      content: 'My first role as a full-time developer, where I worked primarily with WordPress, Ionic/Angular, WPF/.NET Framework, node express, and Microsoft teams development NEEED To Remeber tO WriTE MoRE',
       date: 'JUN 2018- SEP 2019',
        colour: '#7FBDD9'
     },

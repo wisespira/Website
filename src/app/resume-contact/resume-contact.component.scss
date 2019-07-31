@@ -42,7 +42,7 @@ top: 17.5vh;
 }
 
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1300px) {
     .grid-container{
                display: grid;
                 grid-template-rows: 50vh auto 20vw;
@@ -70,6 +70,8 @@ top: 17.5vh;
     max-width: fit-content;
     overflow-y: auto;
     float: left;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    margin-left: 20px;
 }
 @media only screen 
 and (min-device-width : 320px) 

@@ -24,7 +24,7 @@ export class PiechartComponent implements OnInit {
             info: {
                 projs: [{
                     title: 'Porfolio Website',
-                    body: 'The website your viewing code on Github link down below',
+                    body: 'This website is a Progressive Web App, built with the angular framework, allowing it to take advantage of the native features of the viewing device through a service-worker script/web manifest. Currently, the service-worker is set up to cache the website in a browser after viewing allowing it to be loaded even without internet and also prompt phone users to download the website as an app. The main pages animation uses the three.js library which is an extension of WebGL. Other libraries used include fullpage.js, charts.js, bootstrap... my GitHub repo is linked below for more info.',
                     giff: 'https://raw.githubusercontent.com/wisespira/Website/master/its%20the%20giff.gif',
                     showGiff: true
                 }, {
@@ -41,8 +41,6 @@ export class PiechartComponent implements OnInit {
                 projs: [{
                     title: 'Newcastle Uni App',
                     body: 'I developed and deployed multiple releases for the app on android and ios. This included large updates on accessibility, push notifications, exams systems as well as app-wide framework plugin, dependencies, and polyfill updates.',
-                    giff: 'assets/percy.png',
-                    showGiff: true
                 }, {
                     title: 'Peseptron App',
                     body: 'My first ionic app I created mostly to test/learn about the framework. I implemented the p5js library to graphically show the learning process of a basic neural network.',
@@ -50,7 +48,7 @@ export class PiechartComponent implements OnInit {
                     showGiff: false
                 }, {
                     title: 'L system App',
-                    body: 'An app which shows that graphically shows the generation of complex patterns from a simple rule set.'
+                    body: 'An app which shows that graphically shows the generation of complex patterns from a simple rule set. It is esentualy a conversion of my p5js javascript into a typescript ionic project.'
                 }]
             }
         },
@@ -60,14 +58,15 @@ export class PiechartComponent implements OnInit {
             colour: 'rgba(0, 73, 141,1)',
             info: {
                 projs: [{
-                    title: 'Atresia',
+                    title: 'Atresia (currently working on)',
                     body: 'A hybrid messenger app, currently under development using firebase to host the backend. I will be using the WebSockets communication protocol to create the fastest, reliable, real-time messaging experience possible.'
                 }, {
-                    title: 'What2Make',
-                    body: 'Creates a recipe based on ingredient inputs.'
+                    title: 'What2Make (currently working on)',
+                    body: 'takes a set of ingredients and specifications given by the user and quires my firebase database for recipes which match the users request. The database is dynamically created by the users inputting their recipes through the app. '
                 }, {
                     title: 'Ionic-React tester App',
-                    body: 'A starter project to get used to react with ionic.'
+                    body: 'A starter project to get used to react with ionic.',
+                    sytleCentre: true
                 }]
             }
         },
@@ -78,10 +77,11 @@ export class PiechartComponent implements OnInit {
             info: {
                 projs: [{
                     title: 'Push notification Admin system (Newcastle Uni)',
-                    body: 'crates requests to Firebase FCM from client details combined the user information.'
+                    body: 'Contributed to developing the university push notification system. The web services receive requests from the client to update our tables and to link firebase tokens to there university user information. The web service would also receive requests from our WordPress backend push notification plugin, which I also helped develop, containing which groups of students should receive notifications. The web series would then generate the correct requests and send them to firebase to send the notifications.'
                 }, {
                     title: 'Exams Content system (Newcastle Uni)',
-                    body: 'Takes request from WordPress exam plugin and writes over information fed into exam feeds.'
+                    body: 'Takes request from WordPress exam plugin and writes over information fed into exam JSON feeds used by the website and app.',
+                    sytleCentre: true
                 }]
             }
         },
@@ -92,7 +92,8 @@ export class PiechartComponent implements OnInit {
             info: {
                 projs: [{
                     title: 'Atresia Messenger backend',
-                    body: 'Used as Messenger App backend as I wanted the messages to be as fast as posible.'
+                    body: 'Used as Messenger App backend as I wanted the messages to be as fast as posible. I used Firebase Functions as the backend to host the socket.io service.',
+                    sytleCentre: true
                 }]
             }
         },
@@ -105,13 +106,16 @@ export class PiechartComponent implements OnInit {
                     title: 'L-System',
                     body: 'Graphically shows the generation of complex patterns from a simple rule set.',
                     giff: 'https://raw.githubusercontent.com/wisespira/L-System/master/its%20the%20giff.gif',
-                    showGiff: false
+                    showGiff: false,
+                    sytleCentre:true
                 }, {
                     title: 'MetaBalls',
-                    body: 'Graphically creates organic-looking n-dimensional objects.'
+                    body: 'Graphically creates organic-looking n-dimensional objects.',
+                    sytleCentre:true
                 }, {
                     title: 'Fractal trees',
-                    body: 'Generates nice Fractal trees.'
+                    body: 'Generates nice Fractal trees.',
+                    sytleCentre:true
                 }]
             }
         },
@@ -122,7 +126,8 @@ export class PiechartComponent implements OnInit {
             info: {
                 projs: [{
                     title: 'New Air (team project Uni)',
-                    body: 'University team project (my role: lead developer) takes information from the Urban Observatory API and feeds it into an android app. The App then shows areas of high pollution on an in-app google map.'
+                    body: 'University team project (my role: lead developer) takes information from the Urban Observatory API and feeds it into an android app. The App then shows areas of high pollution on an in-app google map.',
+                sytleCentre:true
                 }]
             }
         },
@@ -133,15 +138,18 @@ export class PiechartComponent implements OnInit {
             info: {
                 projs: [{
                     title: 'Cluster/Libary desk App (Newcastle Uni)',
-                    body: 'I developed and deployed multipul realeses. The app is used to provide user information on their timetable, exams, news, cluster/ gym availabity, and other things.'
+                    body: 'I developed and deployed multipul realeses. The app is used to provide user information on their timetable, exams, news, cluster/ gym availabity, and other things.',
+                    sytleCentre:true
                 }, {
                     title: 'Reminder App',
                     body: 'A basic reminder app for desktop.',
                     giff: 'https://raw.githubusercontent.com/wisespira/WPF-Desk-Remider-App/master/giiff.gif',
-                    showGiff: false
+                    showGiff: false,
+                    sytleCentre:true
                 }, {
                     title: 'Basic commandline app',
-                    body: 'Template for calling/running commandline from a desktop app.'
+                    body: 'Template for calling/running commandline from a desktop app.',
+                    sytleCentre:true
                 }, ]
             }
         },
@@ -152,16 +160,21 @@ export class PiechartComponent implements OnInit {
             info: {
                 projs: [{
                     title: 'Push Notification Plugin',
-                    body: 'A plugin alowing wordpress posts to be fired at firebase by a content editor.'
+                    body: 'A plugin alowing wordpress posts to be fired at firebase by a content editor.',
+                    sytleCentre:true
+
                 }, {
                     title: 'Exams Wordpress Plugin',
-                    body: 'Allows exams content editors to update exams mobile and web feeds from wordpress.'
+                    body: 'Allows exams content editors to update exams mobile and web feeds from wordpress.',
+                    sytleCentre:true
                 }, {
                     title: 'Announchments Plugin',
-                    body: 'Allows content editors to create mobile anouncment cards to display in app from posts.'
+                    body: 'Allows content editors to create mobile anouncment cards to display in app from posts.',
+                    sytleCentre:true
                 }, {
-                    title: 'Mobile News backend',
-                    body: 'Generates combined JSON feed from syndicating all university mobile content sites which is then fed to the mobile.'
+                    title: 'Helped Develop Mobile News backend',
+                    body: 'Generates JSON feed from syndicating all university mobile content from sites RSS Feeds, which is then fed to the mobile app.',
+                    sytleCentre:true
                 }]
             }
         },
@@ -174,10 +187,12 @@ export class PiechartComponent implements OnInit {
             info: {
                  projs: [{
                     title: 'Lectured on my role at NUIT',
-                    body: ''
+                    body: '',
+                    
                 },{
                     title: 'Trade Fairs',
-                    body: 'As part of my second year team project I ran a stand showing/explaining our application to people in industry.'
+                    body: 'As part of my second year team project I ran a stand showing/explaining our application to people in industry.',
+                    sytleCentre:true
                 },
                 
                 
@@ -190,7 +205,8 @@ export class PiechartComponent implements OnInit {
             info: {
                  projs: [{
                     title: 'NUIT Placment',
-                    body: 'Interviewed a dozen students for the applications developer role.'
+                    body: 'Interviewed a dozen students for the applications developer role.',
+                    sytleCentre:true
                 }]
             }
     },{
@@ -200,11 +216,13 @@ export class PiechartComponent implements OnInit {
             info: {
                  projs: [{
                     title: 'Handover Documentation',
-                    body: 'I created documention for all services I was in charge of at NUIT to ensure that new placments could easly take over.'
+                    body: 'I created documention for all services I was in charge of at NUIT to ensure that new placments could easly take over.',
+                    sytleCentre:true
                 },
               {
                     title: 'Requirements+Risk analysis  Doc',
-                    body: 'I created requirements+risk analysis documention both at NUIT (multipul projects) and at university.'
+                    body: 'I created requirements+risk analysis documention both at NUIT (multipul projects) and at university.',
+                    sytleCentre:true
                 }
                  ]
             }
@@ -215,11 +233,17 @@ export class PiechartComponent implements OnInit {
             info: {
                  projs: [{
                     title: 'Agile Methodology',
-                    body: "I'm comfortable working with the agile methodology after applying its principles while at NUIT."
+                    body: "I'm comfortable working with the agile methodology after applying its principles while at NUIT.",
+                    sytleCentre:true
+                },{
+                   title: 'Officer Training corps',
+                    body: "Trained with the officer training corps and competed with there running team in multiple competitions and exercises.",
+                    sytleCentre:true 
                 },
                {
                     title: 'General',
-                    body: "I've worked In a hole host of teams most notably taking a lead developer role in my university team project and lead in increasing acsessibilty within University APP."
+                    body: "I've worked In a hole host of teams most notably taking a lead developer role in my university team project and lead in increasing acsessibilty within University APP.",
+                    sytleCentre:true
                 }
                  ]
             }
@@ -230,11 +254,11 @@ export class PiechartComponent implements OnInit {
             info: {
                  projs: [{
                     title: 'GDPR',
-                    body: 'A plugin alowing wordpress posts to be fired at firebase by a content editor.'
+                    body: ''
                 },
                 {
                     title: 'Overcoming Unconscious Bias',
-                    body: 'A plugin alowing wordpress posts to be fired at firebase by a content editor.'
+                    body: ''
                 }]
             }
     }
@@ -246,7 +270,8 @@ export class PiechartComponent implements OnInit {
             info: {
                  projs: [{
                     title: 'Cron Jobs + Pm2 + Apache Config',
-                    body: 'While working at Newcastle uni I set up many systems which relied on a Linux based server.'
+                    body: 'While working at Newcastle uni I set up many systems which relied on a Linux based server. I for instance set up cronjobs to run a PHP script which would check the university door scanners last heartbeats to ensure there were working correctly. ',
+                    sytleCentre:true
                 }]
             }
     },{
@@ -255,8 +280,9 @@ export class PiechartComponent implements OnInit {
             colour: 'rgba(253, 136, 224,1)',
             info: {
                  projs: [{
-                    title: 'Push Notification Plugin',
-                    body: 'A plugin alowing wordpress posts to be fired at firebase by a content editor.'
+                    title: 'Attendance monitoring',
+                    body: 'Set up a virtual host and apache configeration for the university Attendance monitoring backend.',
+                    sytleCentre:true
                 }]
             }
     },{
@@ -266,7 +292,8 @@ export class PiechartComponent implements OnInit {
             info: {
                  projs: [{
                     title: 'Student Attendence Scanners',
-                    body: 'Setting up DHCP so that new scanners pluged into the network would get an ip and config'
+                    body: 'Setting up DHCP so that new scanners pluged into the network would get an ip and config',
+                    sytleCentre:true
                 }]
             }
     },{
@@ -276,14 +303,17 @@ export class PiechartComponent implements OnInit {
             info: {
                  projs: [{
                     title: 'Personal Website',
-                    body: 'Hosted on firebase'
+                    body: 'Hosted on firebase',
+                    sytleCentre:true
                 },
                 {
                     title: 'Newcastle uni App',
-                    body: 'Used Analytics, FCM'
+                    body: 'Used Analytics, FCM',
+                    sytleCentre:true
                 },{
                     title: 'Other',
-                    body: 'Firebase is my default for setting up an easy back end'
+                    body: 'Firebase is my default for setting up an easy back end',
+                    sytleCentre:true
                 },]
             }
     },{
@@ -293,7 +323,7 @@ export class PiechartComponent implements OnInit {
             info: {
                  projs: [{
                     title: 'Newcastle Uni App',
-                    body: 'Process manager for notifications and other mobile services which I worked on, mostly used for logrotation.'
+                    body: 'Process manager for notifications and other mobile services which I worked on, mostly used for log-rotation.'
                 }]
             }
     },{
@@ -303,7 +333,8 @@ export class PiechartComponent implements OnInit {
             info: {
                  projs: [{
                     title: 'Microsoft teams  ',
-                    body: 'Setting up hosting, app services and congnitive services (LUIS) for the Newcastle Uni bot.'
+                    body: 'Set up hosting, app services and congnitive services (LUIS) for the Newcastle Uni bot as well as worked out projected costing for the cloud services.',
+                    sytleCentre:true
                 }]
             }
     },{
@@ -313,7 +344,8 @@ export class PiechartComponent implements OnInit {
             info: {
                  projs: [{
                     title: 'Exams for Libary App',
-                    body: 'Used Microsoft SQL sever managment to run SQL procedures for student infomation. This info was primarly used in libary desktop app.'
+                    body: 'Used Microsoft SQL sever managment to run SQL procedures for student infomation. This info was primarly used in libary desktop app.',
+                    sytleCentre:true
                 }]
             }
     },];
@@ -460,5 +492,6 @@ interface proj {
         body: string,
         giff ? : string,
         showGiff ? : boolean,
-        language ? : string
+        language ? : string,
+        sytleCentre  ?: boolean
 }
