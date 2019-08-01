@@ -31,7 +31,7 @@ top: 17.5vh;
 
 .grid-container2{
      display: grid;
-                grid-template-rows: 40vh auto;
+                grid-template-rows: 35vh auto;
                 grid-template-columns: none;
 }
 .download{
@@ -45,6 +45,9 @@ top: 17.5vh;
 
   font-size: 1rem;
   text-align: center;
+}
+h2{
+    font-size: 1.5rem;
 }
 
 
@@ -68,6 +71,9 @@ top: 17.5vh;
     }
     .remove{
         display: none;
+    }
+    .load{
+         display: none !important;
     }
     
         #about{

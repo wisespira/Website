@@ -1,29 +1,33 @@
 
 <div class="grid-container">
 <div class="grid-item pdf">
-  <pdf-viewer
+  <pdf-viewer style="
+    margin-bottom: 25px;
+"
      [show-all]="true"
     
       [src]="pdfSrc" 
       [render-text]="true"
       class='viewer'
   ></pdf-viewer>
-
+ <div class="load"><a href="assets/Ira Watt Resume.pdf" download>
+  📝 Download Resume 
+     </a></div>
 </div>  
        
 <div class="grid-item contact" style="
     margin-right: 20px;
 ">
 <div class="grid-container2">
-<div class="grid-item" id="about"><h2>About me</h2>
-    <p style="margin-left: 40px; margin-right: 40px">I've been actively developing products for over 3 years in the northeast of England. I interned for 
+    <div class="grid-item" id="about"><img src="assets/profile.jpg" style="height: 75px;border-radius: 50%;" ><h2>About me</h2>
+    <p style="margin-left: 45px; margin-right: 45px; font-size: 0.75rem;">I've been actively developing products for over 3 years in the northeast of England. I interned for 
     14 months at NUIT developing an assortment of projects for them over that period.
         I'm currently finishing my final year at Newcastle University after achieving 83.9% in my second-year whilst working on multiple side projects in my own time. </p>
     
     
     
     
-    
+    <hr style="margin-left: 45px; margin-right: 45px;">
     </div>  
     <div class="grid-item">
    📯 <br>
@@ -60,7 +64,5 @@
 
 </form>-->
 </div>
-    <div class="grid-item download"><a href="assets/Ira Watt Resume.pdf" download>
-  📝 Download Resume 
-    </a></div> 
+
 </div>

@@ -11,7 +11,7 @@ export class AppComponent {
   fullpage_api: any;
   @ViewChild("rendererContainer") rendererContainer: ElementRef;
   /*had to add because of hackin */
-  @HostListener('touchmove', ['$event']) onClick(e) {console.log(e) }
+  //@HostListener('touchmove', ['$event']) onClick(e) { }
 
   @HostListener("window:resize", ["$event"])
   onWindowResize(event) {
@@ -56,12 +56,16 @@ export class AppComponent {
   phone = false;
   deviceInfo = null;
   constructor(private deviceService: DeviceDetectorService) {
-    this.deviceInfo = this.deviceService.getDeviceInfo();
+      this.deviceInfo = this.deviceService.getDeviceInfo();
+    console.log('%c Hello there '+this.deviceInfo.os, 'font-weight: bold; font-size: \n\
+50px;color: red; text-shadow: 3px 3px 0 rgb(217,31,38) , 6px 6px 0 rgb(226,91,14) ,\n\
+ 9px 9px 0 rgb(245,221,8) , 12px 12px 0 rgb(5,148,68) , 15px 15px 0 rgb(2,135,206) , \n\
+18px 18px 0 rgb(4,77,145) , 21px 21px 0 rgb(42,21,113)');
+    
     console.log(this.deviceInfo);
     if(this.deviceInfo.os == 'Mac'||this.deviceInfo.os == 'Windows'){
         this.phone = false;
     }else{this.phone = true; }
-    console.log(this.phone);
     this.config = {
       dragAndMove: false,
       licenseKey: "451ECC33-310547B3-A0579CA3-5B8D3406",
@@ -119,8 +123,8 @@ export class AppComponent {
     for (var i = 0; i < this.numOfSquares; i++) {
       //    let material = new THREE.MeshBasicMaterial({color: Math.floor(Math.random()*16777215), wireframe: true});
       var mesh = new THREE.Mesh(geometry, material);
-      mesh.position.x = (Math.random() * (2) -1) * window.innerWidth;
-      mesh.position.y = (Math.random() * (2) -1) * window.innerHeight;
+      mesh.position.x = (Math.random() * (2) -1) * window.innerWidth*0.75;
+      mesh.position.y = (Math.random() * (2) -1) * window.innerHeight*0.75;
       mesh.position.z = (Math.random() - 0.5) * 500;
 
       let vector = [
@@ -160,7 +164,7 @@ export class AppComponent {
   }
   
   addBall(){
-      console.log(this.meshArray)
+      //console.log(this.meshArray)
       if(this.meshArray.length<=50){
       const geometry = new THREE.IcosahedronGeometry(90, 0);
       let material =  new THREE.MeshNormalMaterial();
@@ -186,8 +190,8 @@ export class AppComponent {
   minusBall(){
       if (this.meshArray.length>0&&this.scene.children.length>0){
           if(this.scene.children>0){
-      console.log(this.meshArray);
-       console.log(this.scene.children);
+     // console.log(this.meshArray);
+     //  console.log(this.scene.children);
       let uuid = this.meshArray[0].mesh.uuid;
       this.meshArray.shift(); 
 

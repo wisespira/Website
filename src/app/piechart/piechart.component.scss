@@ -12,7 +12,10 @@ h2{
     display: inline-block;
     padding-left: 4px;
 }
-
+#image{
+        height: 75px;
+    border-radius: 50%;
+}
 
 .grid-container {
   display: inline-grid;
