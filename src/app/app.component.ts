@@ -165,7 +165,7 @@ export class AppComponent {
   
   addBall(){
       //console.log(this.meshArray)
-      if(this.meshArray.length<=50){
+      if(this.meshArray.length<=35){
       const geometry = new THREE.IcosahedronGeometry(90, 0);
       let material =  new THREE.MeshNormalMaterial();
       var mesh = new THREE.Mesh(geometry, material);
@@ -189,19 +189,13 @@ export class AppComponent {
   }
   minusBall(){
       if (this.meshArray.length>0&&this.scene.children.length>0){
-          if(this.scene.children>0){
-     // console.log(this.meshArray);
-     //  console.log(this.scene.children);
-      let uuid = this.meshArray[0].mesh.uuid;
-      this.meshArray.shift(); 
-
-      this.scene.children = this.scene.children.filter(function(value, index, arr){
-      return value.uuid != uuid;
-    });
-          }else{
-               this.scene.children.shift(); 
-          }
-        }
+      //    if(this.scene.children>0){
+      console.log(this.meshArray);
+       console.log(this.scene.children);
+      //let uuid = this.meshArray[0].mesh.uuid;
+      this.meshArray.shift()
+      this.scene.children.shift()}
+      this.renderer.render(this.scene, this.camera);
   }
   
   
@@ -241,16 +235,28 @@ this.meshArray[i]["mesh"].vector[1] = this.meshArray[i]["mesh"].vector[1]*0.995;
      //  if(  this.meshArray[i]["mesh"].position.y < -(window.innerHeight*0.9)){this.meshArray[i]["mesh"].position.y++;}
        
       if (
-        this.meshArray[i]["mesh"].position.x > window.innerWidth*0.9||
-        this.meshArray[i]["mesh"].position.x < -(window.innerWidth*0.9)
+        this.meshArray[i]["mesh"].position.x > window.innerWidth*0.9
       ) {
        this.meshArray[i]["mesh"].vector[0] = -this.meshArray[i]["mesh"].vector[0];
+       this.meshArray[i]["mesh"].position.x =  this.meshArray[i]["mesh"].position.x -5;
       }
+      
+      if( this.meshArray[i]["mesh"].position.x < -(window.innerWidth*0.9)){
+        this.meshArray[i]["mesh"].vector[0] = -this.meshArray[i]["mesh"].vector[0];
+        this.meshArray[i]["mesh"].position.x =  this.meshArray[i]["mesh"].position.x +5;
+      }
+      
+      
+      
       if (
-        this.meshArray[i]["mesh"].position.y > window.innerHeight*0.9 ||
-        this.meshArray[i]["mesh"].position.y < -(window.innerHeight*0.9)
+        this.meshArray[i]["mesh"].position.y > window.innerHeight*0.9 
       ) {
         this.meshArray[i]["mesh"].vector[1]= -this.meshArray[i]["mesh"].vector[1];
+        this.meshArray[i]["mesh"].position.y  =  this.meshArray[i]["mesh"].position.y  -5;
+      }
+      if(this.meshArray[i]["mesh"].position.y < -(window.innerHeight*0.9)){
+        this.meshArray[i]["mesh"].vector[1]= -this.meshArray[i]["mesh"].vector[1];
+         this.meshArray[i]["mesh"].position.y  =  this.meshArray[i]["mesh"].position.y +5;
       }
 
    

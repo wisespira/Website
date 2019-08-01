@@ -12,7 +12,7 @@
 .grid-container {
   display: inline-grid;
   height: 70vh;
-    grid-template-columns: 45vw auto;
+    grid-template-columns: 60vw auto;
  
     // padding: 10px;
     width: -webkit-fill-available;
@@ -28,8 +28,13 @@ top: 17.5vh;
  
 
 }
+.sub-container{
+     display: grid;
+                grid-template-rows:  auto 20vh;
+                grid-template-columns: none;
+}
 
-.grid-container2{
+.sub-container2{
      display: grid;
                 grid-template-rows: 35vh auto;
                 grid-template-columns: none;
