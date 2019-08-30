@@ -6,7 +6,7 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/wisespira/Website/master/its%20the%20giff.gif">
 </p>
-
+<hr>
 
 ## Info
 
