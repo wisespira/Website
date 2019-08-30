@@ -4,7 +4,7 @@
 </h2>
 
 <p align="center">
-  <img style="max-width:100%;box-shadow: 0 25px 50px -12px rgba(0,0,0,.25);"src="https://raw.githubusercontent.com/wisespira/Website/master/its%20the%20giff.gif">
+  <img src="https://raw.githubusercontent.com/wisespira/Website/master/its%20the%20giff.gif">
 </p>
 <br>
 <hr>
