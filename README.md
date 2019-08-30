@@ -1,10 +1,14 @@
 
 <p align="center">
+## Porfolio
+</p>
+
+<p align="center">
   <img src="https://raw.githubusercontent.com/wisespira/Website/master/its%20the%20giff.gif">
 </p>
 
 
-# Porfolio
+## Info
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.4.
 
