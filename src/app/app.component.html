@@ -1,4 +1,6 @@
-<app-navbar></app-navbar>
+<app-navbar *ngIf="!phone"></app-navbar>
+<app-phone-page *ngIf="phone"></app-phone-page>
+<div *ngIf="!phone">
 <div fullpage id="fullpage" [options]="config" (ref)="getRef($event)">
 <div class="section">
    <div #rendererContainer></div>
@@ -8,16 +10,16 @@
       </p>-->
       <p class="garry">
          <!--Please do <b>not</b> hit the balls !!-->
-         I am a developer from Newcastle 🧙  
+         Welcome ✋ to my Portfolio Website
       </p>
       <p class="garry">
-          who loves to develop software and fun interfaces
+       My name is Ira, I'm a developer 🧙 from Newcastle, UK
       </p>
       <p class="garry">
-         &nbsp;	(ﾉ◕ヮ◕)ﾉ*:・ﾟ✧ <i *ngIf="!phone" class="pointers" (click)="addBall()"style="color: red;">+</i><i *ngIf="!phone" class="pointers"(click)="minusBall()"style="color: blue;">-</i>
+         &nbsp;	(ﾉ◕ヮ◕)ﾉ*:・ﾟ✧ <i class="pointers" (click)="addBall()"style="color: red;">+</i><i *ngIf="!phone" class="pointers"(click)="minusBall()"style="color: blue;">-</i>
       </p>
    </div>
-   <div class="warning blink_me" *ngIf="!phone">WARNING do not hit the balls</div>
+   <div class="warning blink_me"><span style="color: red;">WARNING</span> do not hit the balls</div>
   <!-- <div class="butttons"><button type="button" class="btn btn-outline-danger">+</button><button type="button" class="btn btn-outline-info">-</button> </div>-->
 </div>
 <div class="section">
@@ -29,6 +31,6 @@
 <div class="section">
    <app-resume-contact></app-resume-contact>
 </div>
-    
+</div>
 </div>
 <router-outlet></router-outlet>

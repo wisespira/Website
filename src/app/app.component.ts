@@ -38,7 +38,7 @@ export class AppComponent {
   intersects[0].object['vector'][1] = intersects[0].object['vector'][1] + this.mounseVel[1]*100;
  // intersects[0].object['cooldown'] =1000;
   }
-  
+
   //console.log(intersects[0].object.vector);
 //console.log(Object.keys(intersects[0].object));
     }
@@ -61,7 +61,7 @@ export class AppComponent {
 50px;color: red; text-shadow: 3px 3px 0 rgb(217,31,38) , 6px 6px 0 rgb(226,91,14) ,\n\
  9px 9px 0 rgb(245,221,8) , 12px 12px 0 rgb(5,148,68) , 15px 15px 0 rgb(2,135,206) , \n\
 18px 18px 0 rgb(4,77,145) , 21px 21px 0 rgb(42,21,113)');
-    
+
     console.log(this.deviceInfo);
     if(this.deviceInfo.os == 'Mac'||this.deviceInfo.os == 'Windows'){
         this.phone = false;
@@ -102,7 +102,7 @@ export class AppComponent {
 
     const geometry = new THREE.IcosahedronGeometry(90, 0);
     let material =  new THREE.MeshNormalMaterial();
-    
+
   /*  let Shipmaterial =  new THREE.MeshNormalMaterial({'wireframe':true});
     let shipGeometry = new THREE.ConeGeometry( 40, 160, 256 );
     Shipmaterial.wireframe = false;
@@ -116,8 +116,8 @@ export class AppComponent {
     this.scene.add( cone );
     */
 
-    let exstra = 0;
-    if(this.phone){exstra = 4}else{exstra = 0}
+    let exstra = 6;
+    if(this.phone){exstra = 4}
     this.numOfSquares = Math.floor((window.innerWidth*window.innerHeight)/100000)+exstra;
 
     for (var i = 0; i < this.numOfSquares; i++) {
@@ -136,7 +136,7 @@ export class AppComponent {
       mesh.position.y;
       // WHY IS THIS ALLOWED BUT NOT mesh.vector ?!?!??!?
       mesh['vector'] = vector;
- 
+
       this.meshArray.push({ mesh, vector });
       mesh.translateY(40);
       this.scene.add(mesh);
@@ -162,7 +162,7 @@ export class AppComponent {
     this.scene.background = new THREE.Color( 0xffffff );
     this.animate();
   }
-  
+
   addBall(){
       //console.log(this.meshArray)
       if(this.meshArray.length<=35){
@@ -182,7 +182,7 @@ export class AppComponent {
       mesh.position.y;
       // WHY IS THIS ALLOWED BUT NOT mesh.vector ?!?!??!?
       mesh['vector'] = vector;
- 
+
       this.meshArray.push({ mesh, vector });
       mesh.translateY(40);
       this.scene.add(mesh);}
@@ -197,8 +197,8 @@ export class AppComponent {
       this.scene.children.shift()}
       this.renderer.render(this.scene, this.camera);
   }
-  
-  
+
+
     mousePositionOld =[0,0];
     mousePositionNew = [];
     mounseVel = [];
@@ -213,43 +213,43 @@ export class AppComponent {
     this.mounseVel = [this.mousePositionNew[0]-this.mousePositionOld[0],this.mousePositionNew[1]-this.mousePositionOld[1]];
     this.mousePositionOld = [this.mousePositionNew[0],this.mousePositionNew[1] ]  ;
     }
-  
-   // console.log(this.mounseVel);  could be simplified when done 
+
+   // console.log(this.mounseVel);  could be simplified when done
       for (var i = 0; i < this.meshArray.length; i++) {
-    
+
       this.meshArray[i]["mesh"].rotation.x += 0.01;
       this.meshArray[i]["mesh"].rotation.y += 0.02;
-      
+
       this.meshArray[i]["mesh"].position.x +=  this.meshArray[i]["mesh"].vector[0];
       this.meshArray[i]["mesh"].position.y += this.meshArray[i]["mesh"].vector[1];
-      
+
       if(this.meshArray[i]["mesh"].vector[0]>1||this.meshArray[i]["mesh"].vector[0]<-1){
 this.meshArray[i]["mesh"].vector[0] = this.meshArray[i]["mesh"].vector[0]*0.995;
 }
     if(this.meshArray[i]["mesh"].vector[1]>1||this.meshArray[i]["mesh"].vector[1]<-1){
 this.meshArray[i]["mesh"].vector[1] = this.meshArray[i]["mesh"].vector[1]*0.995;
 }
-     
-   
+
+
        //if(this.meshArray[i]["mesh"].position.y > window.innerHeight*0.9 ){this.meshArray[i]["mesh"].position.y--;}
      //  if(  this.meshArray[i]["mesh"].position.y < -(window.innerHeight*0.9)){this.meshArray[i]["mesh"].position.y++;}
-       
+
       if (
         this.meshArray[i]["mesh"].position.x > window.innerWidth*0.9
       ) {
        this.meshArray[i]["mesh"].vector[0] = -this.meshArray[i]["mesh"].vector[0];
        this.meshArray[i]["mesh"].position.x =  this.meshArray[i]["mesh"].position.x -5;
       }
-      
+
       if( this.meshArray[i]["mesh"].position.x < -(window.innerWidth*0.9)){
         this.meshArray[i]["mesh"].vector[0] = -this.meshArray[i]["mesh"].vector[0];
         this.meshArray[i]["mesh"].position.x =  this.meshArray[i]["mesh"].position.x +5;
       }
-      
-      
-      
+
+
+
       if (
-        this.meshArray[i]["mesh"].position.y > window.innerHeight*0.9 
+        this.meshArray[i]["mesh"].position.y > window.innerHeight*0.9
       ) {
         this.meshArray[i]["mesh"].vector[1]= -this.meshArray[i]["mesh"].vector[1];
         this.meshArray[i]["mesh"].position.y  =  this.meshArray[i]["mesh"].position.y  -5;
@@ -259,7 +259,7 @@ this.meshArray[i]["mesh"].vector[1] = this.meshArray[i]["mesh"].vector[1]*0.995;
          this.meshArray[i]["mesh"].position.y  =  this.meshArray[i]["mesh"].position.y +5;
       }
 
-   
+
       // this.mesh[3].translateY(-40)
       //this.mesh.rotation.x += 0.01;
       // this.mesh.rotation.y += 0.02;

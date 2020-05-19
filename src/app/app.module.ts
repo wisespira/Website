@@ -18,6 +18,7 @@ import { TimelineComponent } from './timeline/timeline.component';
 import { ResumeContactComponent } from './resume-contact/resume-contact.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { FormsModule }   from '@angular/forms';
+import { PhonePageComponent } from './phone-page/phone-page.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FormsModule }   from '@angular/forms';
     PiechartComponent,
     NavbarComponent,
     TimelineComponent,
-    ResumeContactComponent
+    ResumeContactComponent,
+    PhonePageComponent
   ],
   imports: [
   FormsModule,

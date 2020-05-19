@@ -1,0 +1,103 @@
+.page1{
+height: 100vh;
+}
+
+*{
+  text-align: center !important;
+}
+
+hr{
+
+      margin-left: 5px;
+      margin-right: 5px;
+      background: black;
+
+
+}
+
+
+
+header {
+    margin: 72px auto;
+    max-width: 800px;
+}
+
+
+
+
+
+
+
+a:hover {
+    color: #884dff;
+}
+
+label {
+    display: block;
+}
+
+input, textarea, button {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 12px;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+textarea {
+    min-height: 120px;
+}
+
+.contact{
+  padding-left: 36px;
+  padding-right: 36px;
+
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding-top: 10px;
+    padding-bottom:10px;
+}
+.grid-item {
+
+  text-align: center;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 18px 0;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 28px;
+
+}
+
+h3 {
+    font-size: 26px;
+}
+
+p, header nav {
+    margin: 0 0 18px 0;
+}
+
+.about {
+    margin-bottom: 36px;
+}
+label{
+      margin: 1px;
+}
+.contact-links ul {
+    display: flex;
+    justify-content: space-around;
+    font-size: 48px;
+}
+
+
+@media (max-width: 768px) {
+
+}

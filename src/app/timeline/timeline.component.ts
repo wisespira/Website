@@ -17,26 +17,26 @@ alternate: boolean = true;
  clicked = false;
   entries = [
     {
-      header: 'WHAT2EAT APP',
-      content: 'Developed cooking App with ionic and firebase which allows users to query a cooking database based on the ingredients they have. Yet to go on BETA',
-      date: 'DEC 2019',
+      header: 'Algo2K Project',
+      content: 'Developed a trading strategy backtesting services developed as part of my dissertation. The PWA, hosted on Firebase, takes Python ‘strategy’ code uploading it to an Express.js server which runs performance test returning performance metrics back to the user.',
+      date: 'MAY 2020',
       colour: '#BEED53'
     },
    {
-      header: 'Stackoverflow ~ Established User',
-      content: 'I set myself a mini goal to become an established user on StackOverflow (1k rep). I achieved this with 50+ non-Wiki answers becoming top 5% in ionic 4 top and 10% ionic framework in answering questions with the respective tags.',
+      header: 'Stackoverflow 1K Rep ~ Established User',
+      content: 'Achieved this with 50+ non-Wiki answers becoming top 5% in ionic 4 top and the Ionic Framework as well as top 20% in CSS.',
       date: 'SEP 2019',
        colour: '#FCC201'
     },
     {
-      header: 'Applications Developer Placement (NUIT)',
-      content: 'My first role as a full-time developer, where I worked primarily with WordPress, Ionic/Angular, WPF/.NET Framework, node express, and Microsoft teams development NEEED To Remeber tO WriTE MoRE',
+      header: 'Applications Developer Placement at NUIT',
+      content: 'Worked to develop and deploy the Newcastle University mobile (Ionic Framework) and desktop apps (.NET). Lead developer on the Universitys new scanner attendance web services and surrounding infrastructure. Worked in collaboration with University partners, most notably on the Microsoft SLATE project. Within this project I developed applications for the Microsoft Teams platform requiring extensive use of Azure.  ',
       date: 'JUN 2018- SEP 2019',
        colour: '#7FBDD9'
     },
       {
-      header: 'Computer Science with Industrial Placement BSc Honours',
-      content: 'Currenly set for a first achiving 84% in second year. Megority of work was in Java, C and web',
+      header: 'Computer Science with Industrial Placement BSc Honours (1.1)',
+      content: 'Acted as lead developer in team project building an Android app. The app aimed to draw attention to pollution in the local area showcasing data from the Urban Observatory API. Active in with the OTC (Officer Training Core) linked to the university. Ran with and lead OTC running club on training sessions.   ',
       date: 'SEP 2016- JUN 2020',
        colour: '#62A7C5'
     },
@@ -48,7 +48,7 @@ alternate: boolean = true;
     }
   ]
 
- 
+
 
 
 

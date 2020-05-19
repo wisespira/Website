@@ -27,14 +27,19 @@ export class PiechartComponent implements OnInit {
                     body: 'This website is a Progressive Web App, built with the angular framework, allowing it to take advantage of the native features of the viewing device through a service-worker script/web manifest. Currently, the service-worker is set up to cache the website in a browser after viewing allowing it to be loaded even without internet and also prompt phone users to download the website as an app. The main pages animation uses the three.js library which is an extension of WebGL. Other libraries used include fullpage.js, charts.js, bootstrap... my GitHub repo is linked below for more info.',
                     giff: 'https://raw.githubusercontent.com/wisespira/Website/master/its%20the%20giff.gif',
                     showGiff: true
-                }, {
+                },
+                 {
                     title: 'Newcastle uni tab Embedded in Microsoft teams App',
                     body: 'While working with Microsoft to help Microsoft teams integration within the university I developed a PWA replicating the features of the mobile app set hosted it on firebase and embedded it in my Teams app tab.'
-                }]
+                },
+                {
+                title: 'Algo2k - (PWA, Node.js, Python)',
+                body: 'A trading strategy backtesting services developed as part of my dissertation. The PWA, hosted on Firebase, takes Python ‘strategy’ code uploading it to an Express.js server which runs performance test returning performance metrics back to the user.'
+              }]
             }
         },
         {
-            title: 'ionic3',
+            title: 'Ionic3',
             num: 3,
             colour: 'rgba(2, 56, 110,1)',
             info: {
@@ -53,7 +58,7 @@ export class PiechartComponent implements OnInit {
             }
         },
         {
-            title: 'ionic4',
+            title: 'Ionic4',
             num: 3,
             colour: 'rgba(0, 73, 141,1)',
             info: {
@@ -98,7 +103,7 @@ export class PiechartComponent implements OnInit {
             }
         },
         {
-            title: 'p5js',
+            title: 'P5js',
             num: 3,
             colour: 'rgba(254, 204, 81,1)',
             info: {
@@ -154,7 +159,7 @@ export class PiechartComponent implements OnInit {
             }
         },
         {
-            title: 'Wordpress',
+            title: 'Wordpress/PHP',
             num: 4,
             colour: 'rgba(153, 105, 199,1)',
             info: {
@@ -178,8 +183,21 @@ export class PiechartComponent implements OnInit {
                 }]
             }
         },
+        {
+            title: 'Python',
+            num: 1,
+            colour: 'rgba(216, 191, 170,1)',
+            info: {
+                projs: [{
+                    title: 'Trading Strategy Backtesting System',
+                    body: 'Part of the Algo 2k project the backend Phython system using Matplotlib, Pandas and Numpy would run the strategy over a given period returning its Sharpe Ratio',
+                    sytleCentre:true
+
+                }]
+            }
+        },
     ];
-    
+
     softSkills: projectObjs[] = [{
          title: 'Presentations',
             num: 2,
@@ -188,14 +206,14 @@ export class PiechartComponent implements OnInit {
                  projs: [{
                     title: 'Lectured on my role at NUIT',
                     body: '',
-                    
+
                 },{
                     title: 'Trade Fairs',
                     body: 'As part of my second year team project I ran a stand showing/explaining our application to people in industry.',
                     sytleCentre:true
                 },
-                
-                
+
+
                 ]
             }
     },{
@@ -238,7 +256,7 @@ export class PiechartComponent implements OnInit {
                 },{
                    title: 'Officer Training corps',
                     body: "Trained with the officer training corps and competed with there running team in multiple competitions and exercises.",
-                    sytleCentre:true 
+                    sytleCentre:true
                 },
                {
                     title: 'General',
@@ -349,9 +367,9 @@ export class PiechartComponent implements OnInit {
                 }]
             }
     },];
-    
-    
-    
+
+
+
 
 
     constructor() {
@@ -361,7 +379,7 @@ export class PiechartComponent implements OnInit {
             this.doughnutChartData.push(this.arrayAll[i].num);
             this.pieChartColors[0].backgroundColor.push(this.arrayAll[i].colour);
         }
-     
+
     }
     arrayAll: projectObjs[]  = this.projectObjs.concat(this.softSkills,this.tecSkills);
     changeGraph(a: any) {
@@ -396,8 +414,8 @@ export class PiechartComponent implements OnInit {
                  //   console.log(this.doughnutChartLabels);
                     this.doughnutChartData.push(this.softSkills[i].num);
                     this.pieChartColors[0].backgroundColor.push(this.softSkills[i].colour);
-                  
-                    
+
+
                 }
                  break;
             }
@@ -411,8 +429,8 @@ export class PiechartComponent implements OnInit {
                  //   console.log(this.doughnutChartLabels);
                     this.doughnutChartData.push(this.arrayAll[i].num);
                     this.pieChartColors[0].backgroundColor.push(this.arrayAll[i].colour);
-                    
-                    
+
+
                 }
                 //this.chart.labels= this.doughnutChartLabels;
               //  console.table(this.chart);
@@ -427,7 +445,7 @@ export class PiechartComponent implements OnInit {
 
 
     }
-    
+
     private clearGraph(){
         this.doughnutChartData = [];
         this.doughnutChartLabels= [];
@@ -466,7 +484,7 @@ export class PiechartComponent implements OnInit {
             this.selectedItem = this.arrayAll[num].title;
             this.infoOnSelect = this.arrayAll[num].info.projs;
              }
-          
+
         }
        // console.log(this.chart.datasets);
 
