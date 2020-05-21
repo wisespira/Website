@@ -7,6 +7,8 @@ import { DeviceDetectorService } from 'ngx-device-detector';
   styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
+  pagesShow = {"Home":true,"Skills":false,"Experience":false,"Resume":false,"lastPage":false};
+
   config: any;
   fullpage_api: any;
   @ViewChild("rendererContainer") rendererContainer: ElementRef;
@@ -80,14 +82,24 @@ export class AppComponent {
 
       // fullpage callbacks
       afterResize: () => {
-      //  console.log("After resize");
+       console.log("After resize");
       },
+        // pagesShow = {"Home":true,"Skills":false,"Experience":false,"Resume+Contact":false,"lastPage":false};
       afterLoad: (origin, destination, direction) => {
-      //  console.log(origin.index);
+       if(destination.anchor == "Resume+Contact"){
+         this.pagesShow.Resume =  true;
+       
+        } else  if(destination.anchor == "Skills"){
+           this.pagesShow.Skills =  true;
+        }
+          else  if(destination.anchor == "Experience"){
+            this.pagesShow.Experience =  true;
+          }
+
+
+      console.log(destination);
       }
     };
-
-
 
     /*SHould put this in own component also needs refactor -- ['mesh'] is a silly array from memory */
 

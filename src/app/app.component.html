@@ -15,21 +15,22 @@
       <p class="garry">
        My name is Ira, I'm a developer 🧙 from Newcastle, UK
       </p>
+      <!-- &nbsp;	-->
       <p class="garry">
-         &nbsp;	(ﾉ◕ヮ◕)ﾉ*:・ﾟ✧ <i class="pointers" (click)="addBall()"style="color: red;">+</i><i *ngIf="!phone" class="pointers"(click)="minusBall()"style="color: blue;">-</i>
+        <!-- (ﾉ◕ヮ◕)ﾉ*:・ﾟ✧ <i class="pointers" (click)="addBall()"style="color: red;">+</i><i *ngIf="!phone" class="pointers"(click)="minusBall()"style="color: blue;">-</i> -->
       </p>
    </div>
    <div class="warning blink_me"><span style="color: red;">WARNING</span> do not hit the balls</div>
   <!-- <div class="butttons"><button type="button" class="btn btn-outline-danger">+</button><button type="button" class="btn btn-outline-info">-</button> </div>-->
 </div>
 <div class="section">
-   <app-piechart></app-piechart>
+   <app-piechart class="fadein" *ngIf="pagesShow.Skills"></app-piechart>
 </div>
 <div class="section">
-   <app-timeline></app-timeline>
+   <app-timeline *ngIf="pagesShow.Experience"></app-timeline>
 </div>
 <div class="section">
-   <app-resume-contact></app-resume-contact>
+   <app-resume-contact class="fadeinfast2" *ngIf="pagesShow.Resume"></app-resume-contact>
 </div>
 </div>
 </div>
