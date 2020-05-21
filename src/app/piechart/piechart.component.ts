@@ -63,14 +63,16 @@ export class PiechartComponent implements OnInit {
             colour: 'rgba(0, 73, 141,1)',
             info: {
                 projs: [{
-                    title: 'Atresia (currently working on)',
-                    body: 'A hybrid messenger app, currently under development using firebase to host the backend. I will be using the WebSockets communication protocol to create the fastest, reliable, real-time messaging experience possible.'
+                    title: 'Newcastle University App',
+                    body: 'Worked to upgrade the University App from Ionic 3 to Ionic 4',
+                    sytleCentre: true
                 }, {
-                    title: 'What2Make (currently working on)',
-                    body: 'takes a set of ingredients and specifications given by the user and quires my firebase database for recipes which match the users request. The database is dynamically created by the users inputting their recipes through the app. '
+                    title: 'Stackoverflow',
+                    body: 'Top 5% in answering questions on Ionic 4 (2019)',
+                    sytleCentre: true
                 }, {
                     title: 'Ionic-React tester App',
-                    body: 'A starter project to get used to react with ionic.',
+                    body: 'A starter project to get used to react with Ionic.',
                     sytleCentre: true
                 }]
             }
@@ -97,7 +99,7 @@ export class PiechartComponent implements OnInit {
             info: {
                 projs: [{
                     title: 'Atresia Messenger backend',
-                    body: 'Used as Messenger App backend as I wanted the messages to be as fast as posible. I used Firebase Functions as the backend to host the socket.io service.',
+                    body: 'Used as Messenger App backend',
                     sytleCentre: true
                 }]
             }
@@ -143,7 +145,7 @@ export class PiechartComponent implements OnInit {
             info: {
                 projs: [{
                     title: 'Cluster/Libary desk App (Newcastle Uni)',
-                    body: 'I developed and deployed multipul realeses. The app is used to provide user information on their timetable, exams, news, cluster/ gym availabity, and other things.',
+                    body: 'Developed and deployed multipul realeses. The app is used to provide user information on their timetable, exams, news, cluster/ gym availabity, and other things.',
                     sytleCentre:true
                 }, {
                     title: 'Reminder App',
@@ -282,7 +284,7 @@ export class PiechartComponent implements OnInit {
     }
     ];
      tecSkills: projectObjs[] = [{
-         title: 'Linux+Vim',
+         title: 'Apache~Linux',
             num: 3,
             colour: 'rgba(42, 245, 152,1)',
             info: {
@@ -316,7 +318,7 @@ export class PiechartComponent implements OnInit {
             }
     },{
          title: 'Firebase',
-            num: 5,
+            num: 3,
             colour: 'rgba(252, 194, 1,1)',
             info: {
                  projs: [{
@@ -341,7 +343,8 @@ export class PiechartComponent implements OnInit {
             info: {
                  projs: [{
                     title: 'Newcastle Uni App',
-                    body: 'Process manager for notifications and other mobile services which I worked on, mostly used for log-rotation.'
+                    body: 'Process manager for notifications and other mobile services which I worked on, mostly used for log-rotation.',
+                      sytleCentre:true
                 }]
             }
     },{
