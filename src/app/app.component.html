@@ -23,10 +23,10 @@
    <div class="warning blink_me" style="font-size: 0.95rem;"><span style="color: red;">WARNING</span> do not hit the balls</div>
   <!-- <div class="butttons"><button type="button" class="btn btn-outline-danger">+</button><button type="button" class="btn btn-outline-info">-</button> </div>-->
 </div>
-<div class="section">
+<div class="section" *ngIf="IEbrowserCheck">
    <app-piechart class="fadein" *ngIf="pagesShow.Skills && IEbrowserCheck"></app-piechart>
 </div>
-<div class="section" >
+<div class="section"  *ngIf="IEbrowserCheck">
    <app-timeline *ngIf="(pagesShow.Experience || !EdgebrowserCheck) && IEbrowserCheck"></app-timeline>
 </div>
 <div class="section">
