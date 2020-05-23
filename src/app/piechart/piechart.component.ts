@@ -204,15 +204,15 @@ export class PiechartComponent implements OnInit {
                     sytleCentre:true
                 },
               {
-                    title: 'Requirements+Risk analysis  Doc',
-                    body: 'I created requirements+risk analysis documention both at NUIT (multipul projects) and at university.',
+                    title: 'Requirements and Risk analysis  Doc',
+                    body: 'I created requirements and risk analysis documention both at NUIT and whilsts at university.',
                     sytleCentre:true
                 }
                  ]
             }
     },{
          title: 'Teamwork',
-            num: 3,
+            num: 5,
             colour: 'rgba(129, 52, 175,1)',
             info: {
                  projs: [{
@@ -221,14 +221,24 @@ export class PiechartComponent implements OnInit {
                     sytleCentre:true
                 },{
                    title: 'Officer Training corps',
-                    body: "Trained with the officer training corps and competed with there running team in multiple competitions and exercises.",
+                    body: "Trained with the officer training corps at Newcastle University. Competed with their running team and lead sessions.",
                     sytleCentre:true
                 },
                {
-                    title: 'General',
-                    body: "I've worked In a hole host of teams most notably taking a lead developer role in my university team project and lead in increasing acsessibilty within University APP.",
+                    title: 'Lead on accessibility',
+                    body: "Lead in increasing acsessibilty with the Newcastle University app.",
                     sytleCentre:true
-                }
+                },
+                {
+                     title: 'University Team Project',
+                     body: "Lead developer role in my university team project.",
+                     sytleCentre:true
+                 },
+                 {
+                      title: 'Lead in Attendance monitoring system',
+                      body: "Lead in developing the web servives surrounding Newcastle Universitys new attendance monitoring system.",
+                      sytleCentre:true
+                  }
                  ]
             }
     },{
