@@ -43,7 +43,7 @@ top: 17.5vh;
   text-align: center;
 }
 h4{
-   font-size: 1.0rem; 
+   font-size: 1.0rem;
 }
 
 .blink_me_slower {
@@ -76,16 +76,19 @@ h4{
                  text-align: center !important;
             }
         }
-       
+
+    }
+    .max{
+          max-height: 17vh !important;
     }
 }
 
-@media only screen 
-and (min-device-width : 320px) 
+@media only screen
+and (min-device-width : 320px)
 and (max-device-width : 480px) {
     .grid-container{
             display: list-item !important;
-        
+
     }
     .infoBox{
             max-height: 30vh !important;
@@ -95,7 +98,10 @@ and (max-device-width : 480px) {
             max-height: 30vh !important;
     }
     .pie{
-          margin: auto;  
+          margin: auto;
+    }
+    .note{
+      overflow-y:hidden !important;
     }
 }
 
@@ -104,7 +110,7 @@ and (max-device-width : 480px) {
 }
 
 .dropdown-item{
-       cursor: pointer !important; 
+       cursor: pointer !important;
 }
 
 
@@ -122,15 +128,50 @@ img{
   100% { opacity: 1; }
 }
 .note {
-      
+
     overflow-x: hidden;
     animation-name: slidein;
     animation-duration: .9s;
     display: block;
-   
+
 }
 .scrolll{
-    overflow-y: auto; 
+    overflow-y: auto;
     max-height: 60vh;
     padding: 20px;
+        padding-top: 0px;
+}
+.menuDropDown{
+font-size: 1.35rem;      user-select: none;   cursor: pointer;
+padding-top: 10px
+}
+
+
+
+.projTitle{
+font-size: 1.0rem; color:blue; user-select: none;   cursor: pointer;
+}
+.menuDropDown:hover{
+    color: #A9A9A9 !important;
+}
+.projTitle:hover{
+  color: cornflowerblue;
+}
+
+.projTitle2:hover{
+color: chartreuse;
+}
+
+.projTitle3:hover{
+color: hotpink;
+}
+
+
+.projTitle2{
+font-size: 1.0rem; color:green; user-select: none;   cursor: pointer;
+}
+
+
+.projTitle3{
+  font-size: 1.0rem; color:red; user-select: none;   cursor: pointer;
 }
