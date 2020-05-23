@@ -15,10 +15,25 @@ export class PiechartComponent implements OnInit {
 
     infoOnSelect: proj[] = [];
     selectedItem: string = "";
-    titles = ['<b>Skills</b> By # of Projects 🎯', 'Backend tech used 📚', 'Soft Skills/taining 🤹', 'All Skills 🕺']
+    titles = ['Frontend tech 🖥️', 'Backend tech 📚', 'Soft Skills 🤹', 'All Skills 🕺']
     title = '';
-    projectObjs: projectObjs[] = [{
-            title: 'PWA/Angular',
+    projectObjs: projectObjs[] = [
+      {
+          title: 'PWA',
+          num: 1,
+          colour: 'rgba(117,13,55,1)',
+          info: {
+              projs: [{
+                title: 'Algo2k - (PWA, Node.js, Python)',
+                body: 'A trading strategy backtesting services developed as part of my dissertation. The PWA, hosted on Firebase, takes Python ‘strategy’ code uploading it to an Express.js server which runs performance test returning performance metrics back to the user.',
+                sytleCentre:true
+              }]
+          }
+      },
+
+
+      {
+            title: 'Angular7',
             num: 2,
             colour: 'rgba(0, 122, 168,1)',
             info: {
@@ -77,33 +92,7 @@ export class PiechartComponent implements OnInit {
                 }]
             }
         },
-        {
-            title: 'Express',
-            num: 3,
-            colour: 'rgba(255, 245, 123,1)',
-            info: {
-                projs: [{
-                    title: 'Push notification Admin system (Newcastle Uni)',
-                    body: 'Contributed to developing the university push notification system. The web services receive requests from the client to update our tables and to link firebase tokens to there university user information. The web service would also receive requests from our WordPress backend push notification plugin, which I also helped develop, containing which groups of students should receive notifications. The web series would then generate the correct requests and send them to firebase to send the notifications.'
-                }, {
-                    title: 'Exams Content system (Newcastle Uni)',
-                    body: 'Takes request from WordPress exam plugin and writes over information fed into exam JSON feeds used by the website and app.',
-                    sytleCentre: true
-                }]
-            }
-        },
-        {
-            title: 'Socket.io',
-            num: 1,
-            colour: 'rgba(255, 228, 105,1)',
-            info: {
-                projs: [{
-                    title: 'Atresia Messenger backend',
-                    body: 'Used as Messenger App backend',
-                    sytleCentre: true
-                }]
-            }
-        },
+
         {
             title: 'P5js',
             num: 3,
@@ -151,7 +140,7 @@ export class PiechartComponent implements OnInit {
                     title: 'Reminder App',
                     body: 'A basic reminder app for desktop.',
                     giff: 'https://raw.githubusercontent.com/wisespira/WPF-Desk-Remider-App/master/giiff.gif',
-                    showGiff: false,
+                    showGiff: true,
                     sytleCentre:true
                 }, {
                     title: 'Basic commandline app',
@@ -161,38 +150,13 @@ export class PiechartComponent implements OnInit {
             }
         },
         {
-            title: 'Wordpress/PHP',
-            num: 4,
-            colour: 'rgba(153, 105, 199,1)',
-            info: {
-                projs: [{
-                    title: 'Push Notification Plugin',
-                    body: 'A plugin alowing wordpress posts to be fired at firebase by a content editor.',
-                    sytleCentre:true
-
-                }, {
-                    title: 'Exams Wordpress Plugin',
-                    body: 'Allows exams content editors to update exams mobile and web feeds from wordpress.',
-                    sytleCentre:true
-                }, {
-                    title: 'Announchments Plugin',
-                    body: 'Allows content editors to create mobile anouncment cards to display in app from posts.',
-                    sytleCentre:true
-                }, {
-                    title: 'Helped Develop Mobile News backend',
-                    body: 'Generates JSON feed from syndicating all university mobile content from sites RSS Feeds, which is then fed to the mobile app.',
-                    sytleCentre:true
-                }]
-            }
-        },
-        {
             title: 'Python',
             num: 1,
             colour: 'rgba(216, 191, 170,1)',
             info: {
                 projs: [{
                     title: 'Trading Strategy Backtesting System',
-                    body: 'Part of the Algo 2k project the backend Phython system using Matplotlib, Pandas and Numpy would run the strategy over a given period returning its Sharpe Ratio',
+                    body: 'Part of the Algo 2k project the a Phython system using Matplotlib, Pandas and Numpy would run the strategy over a given period returning its Sharpe Ratio',
                     sytleCentre:true
 
                 }]
@@ -294,7 +258,60 @@ export class PiechartComponent implements OnInit {
                     sytleCentre:true
                 }]
             }
-    },{
+    },
+    {
+        title: 'Express',
+        num: 3,
+        colour: 'rgba(255, 245, 123,1)',
+        info: {
+            projs: [{
+                title: 'Push notification Admin system (Newcastle Uni)',
+                body: 'Contributed to developing the university push notification system. The web services receive requests from the client to update our tables and to link firebase tokens to there university user information. The web service would also receive requests from our WordPress backend push notification plugin, which I also helped develop, containing which groups of students should receive notifications. The web series would then generate the correct requests and send them to firebase to send the notifications.'
+            }, {
+                title: 'Exams Content system (Newcastle Uni)',
+                body: 'Takes request from WordPress exam plugin and writes over information fed into exam JSON feeds used by the website and app.',
+                sytleCentre: true
+            }]
+        }
+    },
+    {
+        title: 'Socket.io',
+        num: 1,
+        colour: 'rgba(139, 190, 178,1)',
+        info: {
+            projs: [{
+                title: 'Atresia Messenger backend',
+                body: 'Used as Messenger App backend',
+                sytleCentre: true
+            }]
+        }
+    },
+    {
+        title: 'Wordpress/PHP',
+        num: 4,
+        colour: 'rgba(153, 105, 199,1)',
+        info: {
+            projs: [{
+                title: 'Push Notification Plugin',
+                body: 'A plugin alowing wordpress posts to be fired at firebase by a content editor.',
+                sytleCentre:true
+
+            }, {
+                title: 'Exams Wordpress Plugin',
+                body: 'Allows exams content editors to update exams mobile and web feeds from wordpress.',
+                sytleCentre:true
+            }, {
+                title: 'Announchments Plugin',
+                body: 'Allows content editors to create mobile anouncment cards to display in app from posts.',
+                sytleCentre:true
+            }, {
+                title: 'Helped Develop Mobile News backend',
+                body: 'Generates JSON feed from syndicating all university mobile content from sites RSS Feeds, which is then fed to the mobile app.',
+                sytleCentre:true
+            }]
+        }
+    },
+    {
          title: 'Apache Sever',
             num: 1,
             colour: 'rgba(253, 136, 224,1)',
@@ -337,7 +354,7 @@ export class PiechartComponent implements OnInit {
                 },]
             }
     },{
-         title: 'PM2 (express)',
+         title: 'PM2',
             num: 1,
             colour: 'rgba(191, 28, 43,1)',
             info: {
@@ -371,8 +388,27 @@ export class PiechartComponent implements OnInit {
             }
     },];
 
+  menu = {"menu1":true,"menu2":true,"menu3":true};
+
+  openMenu(i){
+    switch (i) {
+      case 1: this.menu.menu1 = !this.menu.menu1;
+        break;
+        case 2: this.menu.menu2 = !this.menu.menu2;
+          break;
+          case 3: this.menu.menu3 = !this.menu.menu3;
+            break;
+      default:
+        break;
+    }
+
+  }
 
 
+    back(){
+      this.selectedItem = "";
+      // this.title = "";
+    }
 
 
     constructor() {
@@ -436,7 +472,7 @@ export class PiechartComponent implements OnInit {
 
                 }
                 //this.chart.labels= this.doughnutChartLabels;
-              //  console.table(this.chart);
+               // console.table(this.chart);
                 break;
             }
             default: {
@@ -454,7 +490,9 @@ export class PiechartComponent implements OnInit {
         this.doughnutChartLabels= [];
         this.pieChartColors[0].backgroundColor=[];
     }
-
+    public options = {
+  // cutoutPercentage: 30,
+    }
     public doughnutChartLabels = [];
     public doughnutChartData = [];
     public pieChartColors = [{
@@ -462,12 +500,34 @@ export class PiechartComponent implements OnInit {
     }, ];
     public doughnutChartType = 'doughnut';
 
+ //    public chartHovered({ event, active }: { event: MouseEvent, active: {}[] }): void {
+ //   console.log(event, active);
+ // }
+
     ngOnInit() {}
 
+    menuSelect(i,a){
+      switch (a) {
+        case 1:   this.selectedItem = this.projectObjs[i].title;
+              this.infoOnSelect = this.projectObjs[i].info.projs;
+          break;
+          case 2:   this.selectedItem = this.tecSkills[i].title;
+            this.infoOnSelect = this.tecSkills[i].info.projs;
+            break;
+        case 3:     this.selectedItem = this.softSkills[i].title;
+            this.infoOnSelect = this.softSkills[i].info.projs;
+              break;
 
+        default:
+          break;
+      }
+
+
+
+    }
 
     onChartClick(event) {
-     //   console.log(event)
+        console.log(event.active[0])
         if (event.active[0]) {
             let num = Number(event.active[0]._index);
             //******************************************************************************************************************
@@ -489,8 +549,6 @@ export class PiechartComponent implements OnInit {
              }
 
         }
-       // console.log(this.chart.datasets);
-
 
     }
 
