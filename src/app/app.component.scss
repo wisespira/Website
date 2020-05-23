@@ -79,10 +79,10 @@ and (max-device-width : 480px) {
             user-select: none;
 }
 .css-typing p:nth-child(1) {
-  width: 20em;
+  width: 23em;
   opacity: 0;
-  -webkit-animation: type 2s steps(40, end);
-  animation: type 2s steps(40, end);
+  -webkit-animation: type 2s steps(42, end);
+  animation: type 2s steps(42, end);
    animation-delay: 1s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
