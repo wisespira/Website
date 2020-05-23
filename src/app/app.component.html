@@ -3,7 +3,7 @@
 <div *ngIf="!phone">
 <div fullpage id="fullpage" [options]="config" (ref)="getRef($event)">
 <div class="section">
-   <div #rendererContainer></div>
+   <div #rendererContainer *ngIf="EdgebrowserCheck" class="fadeinfast2"></div>
    <div class="css-typing">
      <!-- <p class="garry">
          Welcome to the Website 🎉
@@ -24,10 +24,10 @@
   <!-- <div class="butttons"><button type="button" class="btn btn-outline-danger">+</button><button type="button" class="btn btn-outline-info">-</button> </div>-->
 </div>
 <div class="section">
-   <app-piechart class="fadein" *ngIf="pagesShow.Skills"></app-piechart>
+   <app-piechart class="fadein" *ngIf="pagesShow.Skills && IEbrowserCheck"></app-piechart>
 </div>
-<div class="section">
-   <app-timeline *ngIf="pagesShow.Experience"></app-timeline>
+<div class="section" >
+   <app-timeline *ngIf="(pagesShow.Experience || !EdgebrowserCheck) && IEbrowserCheck"></app-timeline>
 </div>
 <div class="section">
    <app-resume-contact class="fadeinfast2" *ngIf="pagesShow.Resume"></app-resume-contact>
