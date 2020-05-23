@@ -7,9 +7,9 @@
                <button class="btn dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                </button>
                <div class="dropdown-menu middle" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" (click)="changeGraph(0)" >Skills By # of Projects</a>
-                  <a class="dropdown-item" (click)="changeGraph(1)" >Back end tech</a>
-                  <a class="dropdown-item" (click)="changeGraph(2)" >Soft skills+training</a>
+                  <a class="dropdown-item" (click)="changeGraph(0)" >Frontend tech</a>
+                  <a class="dropdown-item" (click)="changeGraph(1)" >Backend tech</a>
+                  <a class="dropdown-item" (click)="changeGraph(2)" >Soft Skills</a>
                   <a class="dropdown-item" (click)="changeGraph(3)" >All Skills</a>
                </div>
             </div>
@@ -20,22 +20,73 @@
          [chartType]="doughnutChartType"
          [colors]="pieChartColors"
          [legend]="false"
+         [options]="options"
          (chartClick)="onChartClick($event)"
          ></canvas>
       </div>
    </div>
    <div class="grid-item infoBox"  >
-      <div  class="scrolll">
-         <h2 *ngIf="!selectedItem" class="blink_me">Select a slice...</h2>
-         <h2>{{selectedItem}}</h2>
-         <br>
-         <div *ngFor="let proj of infoOnSelect; index as i" class="note">
-            <hr>
-            <h4 style="font-size: 1.0rem">&#8226; {{proj.title}}</h4>
-            <p style="font-size: 0.8rem;" [ngStyle]="{'text-align': proj.sytleCentre ? 'center' : 'left' }">{{proj.body}}<span class="blink_me_slower" *ngIf="proj.giff&&!proj.showGiff" style="color: blue; cursor: pointer;" (click)="showMore(i)"> show more...</span>
-               <span *ngIf="proj.giff&&proj.showGiff"   style="color: blue; cursor: pointer;" (click)="showMore(i)"> show less...</span>
-            </p>
-            <div *ngIf="proj.giff&&proj.showGiff" class="note"><img src={{proj.giff}} ></div>
+      <div *ngIf="!selectedItem">
+         <div style="font-size: 1.5rem;">Work To date</div>
+         <p style="font-size: 1.0rem;">Browse from graph or menu:</p>
+         <div  class="scrolll max">
+            <!-- <h2 *ngIf="!selectedItem" class="blink_me">Select a slice...</h2> -->
+
+
+
+            <div class="menuDropDown" (click)="openMenu(1)">Frontend tech </div>
+
+            <div *ngIf="menu.menu1" >
+              <div *ngFor="let proj of projectObjs; index as i" class="note">
+                 <div class="projTitle" (click)="menuSelect(i,1)">{{proj.title}}</div>
+              </div>
+            </div>
+
+            <div class="menuDropDown"  (click)="openMenu(2)">Backend tech</div>
+
+            <div *ngIf="menu.menu2">
+            <div *ngFor="let proj of tecSkills; index as i" class="note">
+               <div class="projTitle2"  (click)="menuSelect(i,2)">{{proj.title}}</div>
+            </div>
+                </div>
+
+            <div class="menuDropDown"  (click)="openMenu(3)">Soft Skills</div>
+
+                  <div *ngIf="menu.menu3" >
+            <div *ngFor="let proj of softSkills; index as i" class="note">
+               <div class="projTitle3"  (click)="menuSelect(i,3)">{{proj.title}}</div>
+            </div>
+    </div>
+
+
+         </div>
+      </div>
+      <div *ngIf="selectedItem" class="note">
+
+
+          <img alt="" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjMTgzMTRGIiB3aWR0aD0iMjAiIGQ9Ik0yNTYgNTA0QzExOSA1MDQgOCAzOTMgOCAyNTZTMTE5IDggMjU2IDhzMjQ4IDExMSAyNDggMjQ4LTExMSAyNDgtMjQ4IDI0OHpNMTQyLjEgMjczbDEzNS41IDEzNS41YzkuNCA5LjQgMjQuNiA5LjQgMzMuOSAwbDE3LTE3YzkuNC05LjQgOS40LTI0LjYgMC0zMy45TDIyNi45IDI1NmwxMDEuNi0xMDEuNmM5LjQtOS40IDkuNC0yNC42IDAtMzMuOWwtMTctMTdjLTkuNC05LjQtMjQuNi05LjQtMzMuOSAwTDE0Mi4xIDIzOWMtOS40IDkuNC05LjQgMjQuNiAwIDM0eiIvPjwvc3ZnPg==" style="
+             width: 25px;
+             vertical-align: unset;
+             float: left;
+              cursor: pointer;
+               " (click)="back()" />
+
+
+
+              <h2 style="
+    margin-right: 20px;
+">{{selectedItem}}</h2>
+         <div  class="scrolll scollStop">
+            <br>
+            <div *ngFor="let proj of infoOnSelect; index as i" >
+  <hr>
+               <h4 style="font-size: 1.0rem">&#8226; {{proj.title}}</h4>
+               <p style="font-size: 0.8rem;" [ngStyle]="{'text-align': proj.sytleCentre ? 'center' : 'left' }">{{proj.body}}<span class="blink_me_slower" *ngIf="proj.giff&&!proj.showGiff" style="color: blue; cursor: pointer;" (click)="showMore(i)"> show more...</span>
+                  <span *ngIf="proj.giff&&proj.showGiff"   style="color: blue; cursor: pointer;" (click)="showMore(i)"> show less...</span>
+               </p>
+               <div *ngIf="proj.giff&&proj.showGiff" class="note"><img src={{proj.giff}} ></div>
+
+            </div>
          </div>
       </div>
    </div>
