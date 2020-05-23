@@ -12,8 +12,8 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link active" href="#Home">Home 🏠<span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link active" href="#Skills">Skills 🕺<span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link active" href="#Experience">Experience ✨<span class="sr-only">(current)</span></a>
+        <a  *ngIf="IEbrowserCheck" class="nav-item nav-link active" href="#Skills">Skills 🕺<span class="sr-only">(current)</span></a>
+          <a  *ngIf="IEbrowserCheck" class="nav-item nav-link active" href="#Experience">Experience ✨<span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link active" href="#Resume+Contact">Resume and Contact 📧<span class="sr-only">(current)</span></a>
     </div>
   </div>

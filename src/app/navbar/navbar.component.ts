@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { DeviceDetectorService } from 'ngx-device-detector';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -7,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private deviceService: DeviceDetectorService) {
+console.log(this.deviceService)
+if(this.deviceService.browser == "IE"){
+   this.IEbrowserCheck = false;}
+  }
+IEbrowserCheck = true;
   ngOnInit() {
   }
 
