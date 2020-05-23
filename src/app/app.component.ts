@@ -8,7 +8,8 @@ import { DeviceDetectorService } from 'ngx-device-detector';
 })
 export class AppComponent {
   pagesShow = {"Home":true,"Skills":false,"Experience":false,"Resume":false,"lastPage":false};
-
+  EdgebrowserCheck = true;
+  IEbrowserCheck = true;
   config: any;
   fullpage_api: any;
   @ViewChild("rendererContainer") rendererContainer: ElementRef;
@@ -64,7 +65,14 @@ export class AppComponent {
  9px 9px 0 rgb(245,221,8) , 12px 12px 0 rgb(5,148,68) , 15px 15px 0 rgb(2,135,206) , \n\
 18px 18px 0 rgb(4,77,145) , 21px 21px 0 rgb(42,21,113)');
 
+
     console.log(this.deviceInfo);
+    if(this.deviceInfo.browser == "MS-Edge" ){
+      this.EdgebrowserCheck = false;
+    }
+    if(this.deviceInfo.browser == "IE"){
+       this.IEbrowserCheck = false;
+    }
     if(this.deviceInfo.os == 'Mac'||this.deviceInfo.os == 'Windows'){
         this.phone = false;
     }else{this.phone = true; }
@@ -88,7 +96,7 @@ export class AppComponent {
       afterLoad: (origin, destination, direction) => {
        if(destination.anchor == "Resume+Contact"){
          this.pagesShow.Resume =  true;
-       
+
         } else  if(destination.anchor == "Skills"){
            this.pagesShow.Skills =  true;
         }
