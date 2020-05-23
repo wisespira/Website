@@ -3,7 +3,7 @@
 <div class="grid-item pdf">
     <div class="sub-container">
     <div class="grid-item">
-  <pdf-viewer style="
+  <pdf-viewer *ngIf="EdgebrowserCheck && IEbrowserCheck" style="
     margin-bottom: 25px;
   min-width: 805px;
       min-height: 459px;
@@ -14,8 +14,18 @@
       [render-text]="true"
       class='viewer'
   ></pdf-viewer>
+
+
+
+  <iframe *ngIf="!EdgebrowserCheck || !IEbrowserCheck" src="assets/Ira Watt Resume.pdf" style="
+    margin-bottom: 25px;
+  min-width: 805px;
+      min-height: 459px;    border: none;
+"   class='viewer'></iframe>
+
+
     </div>
- <div class="grid-item load" ><a href="assets/Ira Watt Resume.pdf" download style="
+ <div class="grid-item load" *ngIf="!IEbrowserCheck"><a href="assets/Ira Watt Resume.pdf" download style="
     margin-right: 10px;
 ">
   📝 Download Resume
@@ -27,7 +37,21 @@
     <div class="grid-item" id="about" style="
     margin-right: 5vw;
     margin-left: 5vw;
-"><img src="assets/profile.jpg" style="height: 75px;border-radius: 50%;" ><h2>About me</h2>
+">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<img src="assets/profile.jpg" style="height: 75px;border-radius: 50%;" ><h2>About me</h2>
     <p style="font-size: 0.75rem;">I've been actively developing products for over 3 years in the northeast of England. I interned for
     14 months at NUIT developing an assortment of projects for them over that period.
         I'm currently finishing my final year at Newcastle University after achieving 83.9% in my second-year whilst working on multiple side projects in my own time. </p>
