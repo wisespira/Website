@@ -70,9 +70,7 @@ export class AppComponent {
     if(this.deviceInfo.browser == "MS-Edge" ){
       this.EdgebrowserCheck = false;
     }
-    if(this.deviceInfo.browser == "IE"){
-       this.IEbrowserCheck = false;
-    }
+
     if(this.deviceInfo.os == 'Mac'||this.deviceInfo.os == 'Windows'){
         this.phone = false;
     }else{this.phone = true; }
@@ -108,6 +106,14 @@ export class AppComponent {
       console.log(destination);
       }
     };
+
+    if(this.deviceInfo.browser == "IE"){
+       this.IEbrowserCheck = false;
+         this.config.anchors = [
+           "Home",
+           "Resume+Contact",
+         ]
+    }
 
     /*SHould put this in own component also needs refactor -- ['mesh'] is a silly array from memory */
 
