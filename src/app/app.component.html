@@ -20,7 +20,7 @@
         <!-- (ﾉ◕ヮ◕)ﾉ*:・ﾟ✧ <i class="pointers" (click)="addBall()"style="color: red;">+</i><i *ngIf="!phone" class="pointers"(click)="minusBall()"style="color: blue;">-</i> -->
       </p>
    </div>
-   <div class="warning blink_me" style="font-size: 0.95rem;"><span style="color: red;">WARNING</span> do not hit the balls</div>
+   <div *ngIf="EdgebrowserCheck" class="warning blink_me" style="font-size: 0.95rem;"><span style="color: red;">WARNING</span> do not hit the balls</div>
   <!-- <div class="butttons"><button type="button" class="btn btn-outline-danger">+</button><button type="button" class="btn btn-outline-info">-</button> </div>-->
 </div>
 <div class="section" *ngIf="IEbrowserCheck">
