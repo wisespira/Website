@@ -11,7 +11,7 @@ export class ResumeContactComponent implements OnInit {
     console.log(this.deviceService)
     if(this.deviceService.browser == "MS-Edge"){
        this.EdgebrowserCheck = false;}
-       if(this.deviceInfo.browser == "IE"){
+       if(this.deviceService.browser == "IE"){
           this.IEbrowserCheck = false;}
 
 
