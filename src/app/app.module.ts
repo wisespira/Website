@@ -19,6 +19,7 @@ import { ResumeContactComponent } from './resume-contact/resume-contact.componen
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { FormsModule }   from '@angular/forms';
 import { PhonePageComponent } from './phone-page/phone-page.component';
+import { SliderComponent } from './slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { PhonePageComponent } from './phone-page/phone-page.component';
     NavbarComponent,
     TimelineComponent,
     ResumeContactComponent,
-    PhonePageComponent
+    PhonePageComponent,
+    SliderComponent
   ],
   imports: [
   FormsModule,
