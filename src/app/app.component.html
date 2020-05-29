@@ -4,6 +4,10 @@
 <div fullpage id="fullpage" [options]="config" (ref)="getRef($event)">
 <div class="section">
    <div #rendererContainer *ngIf="EdgebrowserCheck" class="fadeinfast2"></div>
+  <div class="together">
+    <div class="test " style="left: 0;right:0;margin-left: auto;margin-right: auto;position: absolute;width: 50%;top: 40%;">
+
+
    <div class="css-typing">
      <!-- <p class="garry">
          Welcome to the Website 🎉
@@ -20,8 +24,38 @@
         <!-- (ﾉ◕ヮ◕)ﾉ*:・ﾟ✧ <i class="pointers" (click)="addBall()"style="color: red;">+</i><i *ngIf="!phone" class="pointers"(click)="minusBall()"style="color: blue;">-</i> -->
       </p>
    </div>
+   <div class="css-typing flip">
+     <!-- <p class="garry">
+         Welcome to the Website 🎉
+      </p>-->
+      <p class="garry">
+         <!--Please do <b>not</b> hit the balls !!-->
+         Welcome ✋ to my Portfolio Website
+      </p>
+      <p class="garry">
+       My name is Ira, I'm a developer 🧙 from Newcastle, UK
+      </p>
+      <!-- &nbsp;	-->
+      <p class="garry">
+        <!-- (ﾉ◕ヮ◕)ﾉ*:・ﾟ✧ <i class="pointers" (click)="addBall()"style="color: red;">+</i><i *ngIf="!phone" class="pointers"(click)="minusBall()"style="color: blue;">-</i> -->
+      </p>
+   </div>
+
+       </div>
+   <!-- <app-slider class="fadeinfast2 side" style="
+    position: absolute;
+    top: 20%;
+    right: 0;
+    margin-right: 100px;
+
+" ></app-slider> -->
+
+
+</div>
    <div *ngIf="EdgebrowserCheck" class="warning blink_me" style="font-size: 0.95rem;"><span style="color: red;">WARNING</span> do not hit the balls</div>
   <!-- <div class="butttons"><button type="button" class="btn btn-outline-danger">+</button><button type="button" class="btn btn-outline-info">-</button> </div>-->
+
+
 </div>
 <div class="section" *ngIf="IEbrowserCheck">
    <app-piechart class="fadein" *ngIf="pagesShow.Skills && IEbrowserCheck"></app-piechart>
