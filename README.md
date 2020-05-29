@@ -1,6 +1,6 @@
 
 <h2 align="center">
-** Web Porfolio **
+ Web Porfolio 
 </h2>
 <p align="center">Has been side project over the past year and a bit. Furture goal is to change to left to right slide configureation with a 
 constant panaramic Three.js visual background (updated ~ not the balls). Currently it needs refactoring and optimising for Edge and large screens</P>
