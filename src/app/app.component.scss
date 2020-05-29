@@ -18,6 +18,14 @@ canvas{
     }
 }
 
+
+@media only screen and (max-width: 991px) {
+.side{
+  display: none;
+}
+
+}
+
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
@@ -27,8 +35,6 @@ and (max-device-width : 480px) {
     .garry{
         font-size: 0.8rem !important;
     }
-
-
 
 }
 .pointers{
@@ -54,11 +60,18 @@ and (max-device-width : 480px) {
     opacity: 0;
   }
 }
-
+.flip{
+  transform: scaleY(-0.6);
+opacity: .5;
+    margin-top: -5%;
+    -webkit-mask-image: -webkit-gradient(linear,  top,  bottom, 
+    from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
 .css-typing{
-        position: absolute;
-   top: 40%;
-    margin-left: 3%;
+   //      position: absolute;
+   // top: 40%;
+   // margin-left: 20vw;
+ text-align: center;
 }
 
 .css-typing p {
@@ -89,7 +102,7 @@ and (max-device-width : 480px) {
 }
 
 .css-typing p:nth-child(2) {
-  width: 30em;
+  width: 31em;
   opacity: 0;
   -webkit-animation: type2 3s steps(60, end);
   animation: type2 3s steps(60, end);
