@@ -3,7 +3,7 @@
  Web Porfolio 
 </h2>
 <p align="center">Has been a side project over the past year and a bit. Furture goal is to change to left to right slide configureation with a 
-constant panaramic Three.js visual background (updated ~ not the balls). Currently it needs refactoring, pwa icons updated and optimising for Edge and large screens.</P>
+constant panaramic Three.js visual background (updated ~ not the balls). Currently tasks are: refactoring, pwa icons updated and optimising for Edge and large screens.</P>
 <p align="center">
   <img src="https://raw.githubusercontent.com/wisespira/Website/master/its%20the%20giff.gif">
 </p>
