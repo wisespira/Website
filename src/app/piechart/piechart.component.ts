@@ -15,7 +15,7 @@ export class PiechartComponent implements OnInit {
 
     infoOnSelect: proj[] = [];
     selectedItem: string = "";
-    titles = ['Frontend tech 🖥️', 'Backend tech 📚', 'Soft Skills 🤹', 'All Skills 🕺']
+    titles = ['Frontend tech 🖥️', 'Backend tech 📚', 'Soft Skills 🤹', 'All Skills & Projects']
     title = '';
     projectObjs: projectObjs[] = [
       {
@@ -39,18 +39,14 @@ export class PiechartComponent implements OnInit {
             info: {
                 projs: [{
                     title: 'Porfolio Website',
-                    body: 'This website is a Progressive Web App, built with the angular framework, allowing it to take advantage of the native features of the viewing device through a service-worker script/web manifest. Currently, the service-worker is set up to cache the website in a browser after viewing allowing it to be loaded even without internet and also prompt phone users to download the website as an app. The main pages animation uses the three.js library which is an extension of WebGL. Other libraries used include fullpage.js, charts.js, bootstrap... my GitHub repo is linked below for more info.',
+                    body: 'This website is a Progressive Web App, built with the angular framework. being a PWA it can take advantage of the native features of the viewing device with use of a service-worker script/web manifest. Currently, the service-worker is set up to cache the website in a browser after viewing allowing it to be loaded even without internet and also prompt phone users to download the website as an app. The home pages animation uses the three.js library which is an extension of WebGL. Other libraries used include fullpage.js, charts.js, bootstrap... my GitHub repo is linked below for more info.',
                     giff: 'https://raw.githubusercontent.com/wisespira/Website/master/its%20the%20giff.gif',
                     showGiff: true
                 },
                  {
                     title: 'Newcastle uni tab Embedded in Microsoft teams App',
                     body: 'While working with Microsoft to help Microsoft teams integration within the university I developed a PWA replicating the features of the mobile app set hosted it on firebase and embedded it in my Teams app tab.'
-                },
-                {
-                title: 'Algo2k - (PWA, Node.js, Python)',
-                body: 'A trading strategy backtesting services developed as part of my dissertation. The PWA, hosted on Firebase, takes Python ‘strategy’ code uploading it to an Express.js server which runs performance test returning performance metrics back to the user.'
-              }]
+                }]
             }
         },
         {
@@ -68,7 +64,7 @@ export class PiechartComponent implements OnInit {
                     showGiff: false
                 }, {
                     title: 'L system App',
-                    body: 'An app which shows that graphically shows the generation of complex patterns from a simple rule set. It is esentualy a conversion of my p5js javascript into a typescript ionic project.'
+                    body: 'An app which illustrates the generation of complex patterns from a simple rule set. It is esentualy a conversion of my p5js javascript into a typescript ionic project.'
                 }]
             }
         },
@@ -126,7 +122,18 @@ export class PiechartComponent implements OnInit {
                 sytleCentre:true
                 }]
             }
-        },
+        },      {
+                  title: 'React',
+                  num: 1,
+                  colour: 'rgba(255,167,55,1)',
+                  info: {
+                      projs: [{
+                          title: 'WebGL Gallery',
+                          body: 'Current Project ~ https://webglgallery.firebaseapp.com/',
+                      sytleCentre:true
+                      }]
+                  }
+              },
         {
             title: '.NET Framework/WPF',
             num: 3,
@@ -134,7 +141,7 @@ export class PiechartComponent implements OnInit {
             info: {
                 projs: [{
                     title: 'Cluster/Libary desk App (Newcastle Uni)',
-                    body: 'Developed and deployed multipul realeses. The app is used to provide user information on their timetable, exams, news, cluster/ gym availabity, and other things.',
+                    body: 'Developed and deployed multiple releases. The app is used to provide user information on their timetable, exams, news, cluster/ gym availabity, and other services.',
                     sytleCentre:true
                 }, {
                     title: 'Reminder App',
@@ -143,8 +150,8 @@ export class PiechartComponent implements OnInit {
                     showGiff: true,
                     sytleCentre:true
                 }, {
-                    title: 'Basic commandline app',
-                    body: 'Template for calling/running commandline from a desktop app.',
+                    title: 'Basic command line app',
+                    body: 'Template for calling/running command line from a desktop app.',
                     sytleCentre:true
                 }, ]
             }
@@ -156,7 +163,7 @@ export class PiechartComponent implements OnInit {
             info: {
                 projs: [{
                     title: 'Trading Strategy Backtesting System',
-                    body: 'Part of the Algo 2k project the a Phython system using Matplotlib, Pandas and Numpy would run the strategy over a given period returning its Sharpe Ratio',
+                    body: 'Part of the Algo 2k project, a Phython system using Matplotlib, Pandas and Numpy would run strategy code over a given period returning its Sharpe Ratio',
                     sytleCentre:true
 
                 }]
@@ -170,7 +177,7 @@ export class PiechartComponent implements OnInit {
             colour: 'rgba(245, 133, 41,1)',
             info: {
                  projs: [{
-                    title: 'Lectured on my role at NUIT',
+                    title: 'Lectured on my role at NUIT (Newcastle University IT)',
                     body: '',
 
                 },{
@@ -194,18 +201,18 @@ export class PiechartComponent implements OnInit {
                 }]
             }
     },{
-         title: 'Documeter',
+         title: 'Documentation',
             num: 2,
             colour: 'rgba(221, 42, 123,1)',
             info: {
                  projs: [{
                     title: 'Handover Documentation',
-                    body: 'I created documention for all services I was in charge of at NUIT to ensure that new placments could easly take over.',
+                    body: 'I created documentation for all services I was in charge of at NUIT to ensure that new placement could easly take over.',
                     sytleCentre:true
                 },
               {
-                    title: 'Requirements and Risk analysis  Doc',
-                    body: 'I created requirements and risk analysis documention both at NUIT and whilsts at university.',
+                    title: 'Requirements and Risk analysis Doc',
+                    body: 'I created requirements and risk analysis documention both at NUIT and while at university.',
                     sytleCentre:true
                 }
                  ]
@@ -264,7 +271,7 @@ export class PiechartComponent implements OnInit {
             info: {
                  projs: [{
                     title: 'Cron Jobs + Pm2 + Apache Config',
-                    body: 'While working at Newcastle uni I set up many systems which relied on a Linux based server. I for instance set up cronjobs to run a PHP script which would check the university door scanners last heartbeats to ensure there were working correctly. ',
+                    body: 'While working at Newcastle uni I set up many systems which relied on a Linux based server. For instance I set up cronjobs to run a PHP script which would check the university door scanners activness to ensure there were working correctly. ',
                     sytleCentre:true
                 }]
             }
@@ -276,7 +283,7 @@ export class PiechartComponent implements OnInit {
         info: {
             projs: [{
                 title: 'Push notification Admin system (Newcastle Uni)',
-                body: 'Contributed to developing the university push notification system. The web services receive requests from the client to update our tables and to link firebase tokens to there university user information. The web service would also receive requests from our WordPress backend push notification plugin, which I also helped develop, containing which groups of students should receive notifications. The web series would then generate the correct requests and send them to firebase to send the notifications.'
+                body: 'Contributed to developing the university push notification system. The web services receive requests from the client to update MySQL tables and to link Firebase tokens to their university user information. The web service would also receive requests from a WordPress backend push notification plugin, which I also helped develop, containing which groups of students should receive notifications. The web series would then generate the correct requests and send them to firebase to send out the notifications.'
             }, {
                 title: 'Exams Content system (Newcastle Uni)',
                 body: 'Takes request from WordPress exam plugin and writes over information fed into exam JSON feeds used by the website and app.',
@@ -303,7 +310,7 @@ export class PiechartComponent implements OnInit {
         info: {
             projs: [{
                 title: 'Push Notification Plugin',
-                body: 'A plugin alowing wordpress posts to be fired at firebase by a content editor.',
+                body: 'A plugin alowing wordpress posts to be fired at firebase by a content editor which would then be sent as a mobile notification.',
                 sytleCentre:true
 
             }, {
@@ -322,7 +329,7 @@ export class PiechartComponent implements OnInit {
         }
     },
     {
-         title: 'Apache Sever',
+         title: 'Apache Server',
             num: 1,
             colour: 'rgba(253, 136, 224,1)',
             info: {
@@ -339,7 +346,7 @@ export class PiechartComponent implements OnInit {
             info: {
                  projs: [{
                     title: 'Student Attendence Scanners',
-                    body: 'Setting up DHCP so that new scanners pluged into the network would get an ip and config',
+                    body: 'Setting up DHCP so that new scanners pluged into the network would get an ip and config.',
                     sytleCentre:true
                 }]
             }
@@ -359,7 +366,7 @@ export class PiechartComponent implements OnInit {
                     sytleCentre:true
                 },{
                     title: 'Other',
-                    body: 'Firebase is my default for setting up an easy back end',
+                    body: 'Firebase is my default for setting up an easy backend',
                     sytleCentre:true
                 },]
             }
@@ -381,18 +388,31 @@ export class PiechartComponent implements OnInit {
             info: {
                  projs: [{
                     title: 'Microsoft teams  ',
-                    body: 'Set up hosting, app services and congnitive services (LUIS) for the Newcastle Uni bot as well as worked out projected costing for the cloud services.',
+                    body: 'Set up hosting, app services and congnitive services (LUIS) for the Newcastle Uni chat bot as well as worked out projected costing for the cloud services.',
                     sytleCentre:true
                 }]
             }
-    },{
-         title: 'SQL sever managment',
+    },
+    {
+        title: 'AWS',
+        num: 1,
+        colour: 'rgba(72, 169, 166,1)',
+        info: {
+            projs: [{
+                title: 'Serverside Module',
+                body: 'As part of the course at university I set up a Linux EC2 instance using the AWS dashboard to customise it.',
+                sytleCentre: true
+            }]
+        }
+    },
+    {
+         title: 'SQL server managment',
             num: 1,
             colour: 'rgba(177, 240, 240,1)',
             info: {
                  projs: [{
                     title: 'Exams for Libary App',
-                    body: 'Used Microsoft SQL sever managment to run SQL procedures for student infomation. This info was primarly used in libary desktop app.',
+                    body: 'Used Microsoft SQL server managment to run SQL procedures for student infomation. This info was primarly used in libary desktop app.',
                     sytleCentre:true
                 }]
             }
