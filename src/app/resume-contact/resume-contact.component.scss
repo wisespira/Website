@@ -13,7 +13,7 @@
   display: inline-grid;
   height: 70vh;
     grid-template-columns: auto auto;
- 
+
     // padding: 10px;
     width: -webkit-fill-available;
     //height: -webkit-fill-available;
@@ -25,7 +25,7 @@ margin-right: auto;
 left: 0;
 right: 0;
 top: 17.5vh;
- 
+
 
 }
 .sub-container{
@@ -36,11 +36,11 @@ top: 17.5vh;
 
 .sub-container2{
      display: grid;
-                grid-template-rows: 35vh auto;
+                grid-template-rows: 35vh auto auto;
                 grid-template-columns: none;
 }
 .download{
- 
+
     text-align: left !important;
    padding-left: 95px;
     margin-top: 30px;
@@ -54,6 +54,7 @@ top: 17.5vh;
 h2{
     font-size: 1.5rem;
 }
+
 
 
 @media only screen and (max-width: 1300px) {
@@ -80,11 +81,11 @@ h2{
     .load{
          display: none !important;
     }
-    
+
         #about{
             display: none !important;
         }
-    
+
 }
 .viewer{
     display: inline-block;
@@ -95,8 +96,8 @@ h2{
         box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     margin-left: 20px;
 }
-@media only screen 
-and (min-device-width : 320px) 
+@media only screen
+and (min-device-width : 320px)
 and (max-device-width : 480px) {
    .pdf{
    display: none;
@@ -108,16 +109,16 @@ and (max-device-width : 480px) {
 
 @media only screen and (min-width: 1900px) {
     .grid-item{
-        
-        img{
+
+        #profilePic{
             height: 100px !important;
             margin-bottom: 10px
         }
         p{
-         font-size: 0.9rem !important;  
-         margin-left: 45px !important; 
-         margin-right: 45px !important;  
+         font-size: 0.9rem !important;
+         margin-left: 45px !important;
+         margin-right: 45px !important;
         }
-        
+
     }
 }

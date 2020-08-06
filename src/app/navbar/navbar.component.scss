@@ -1,19 +1,55 @@
+nav{
+   // background-image: url("/assets/blender.png");
+   // background-position: center;
+}
+
+
+
 .navbar-expand-lg .navbar-nav{
     margin-left: auto;
 }
 .nav-link{
-        padding-top: 0.5rem;
+    padding-top: 0.5rem;
     padding-right: 2rem !important;
     padding-bottom: 0.5rem;
     padding-left: 2rem !important;
 }
 .navbar-brand{
 margin: auto;
-font-size: 1.25rem !important;
-
+font-size: 1.3rem !important;
 }
+.nav-item{
+  // color: #0000AA !important;
+   font-size: 1.1rem !important;
+
+   display: inline-block;
+position: relative;
+}
+
+
+// .nav-link-fade-up::before {
+//   width: 50%;
+//   bottom: 7px;
+//   opacity: 0;
+// }
+//
+// .nav-link-fade-up:hover::before {
+//   bottom: 0px;
+//   opacity: 1;
+//   background: linear-gradient(to right, #ff3399, #ff3399, #6666ff,  #00ff00, #0099ff , #0099ff , #ff3399, #6666ff);
+//   background-size: 200% 200%;
+//   -webkit-animation: rainbow_animation_two 10s cubic-bezier (0.68, 0.55, 0.265, 1) infinite;
+//   -moz-animation: rainbow_animation_two 10s cubic-bezier (0.68, 0.55, 0.265, 1) infinite;
+//   animation: rainbow_animation_two  10s cubic-bezier (0.68, 0.55, 0.265, 1) infinite;
+// }
+
 .nav-item:hover{
-    color: #A9A9A9 !important;
+  background: linear-gradient(to right, #ff3399, #ff3399, #6666ff,  #00ff00, #0099ff , #0099ff , #ff3399, #6666ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  animation: rainbow_animation 6s ease-in-out infinite;
+  background-size: 400% 100%;
 }
 
 .navbar-nav {
@@ -21,6 +57,29 @@ font-size: 1.25rem !important;
     text-align: -webkit-right;
 
 }
+
+
+.nav-link:hover {
+  opacity: 1;
+}
+
+.nav-link::before {
+  transition: 300ms;
+  height: 5px;
+  content: "";
+  position: absolute;
+  background-color: #031D44;
+}
+
+.nav-link-ltr::before {
+  width: 0%;
+  bottom: 10px;
+}
+
+.nav-link-ltr:hover::before {
+  width: 100%;
+}
+
 @media only screen and (max-width: 991px) {
    .navbar-brand{
             padding-left: 56px;
@@ -29,8 +88,8 @@ font-size: 1.25rem !important;
 
 
 
-@media only screen 
-and (min-device-width : 320px) 
+@media only screen
+and (min-device-width : 320px)
 and (max-device-width : 480px) {
 
     .navbar-brand{
@@ -41,6 +100,36 @@ and (max-device-width : 480px) {
                 font-size: 0.7rem !important;
             }
     }
-    
-    
 }
+
+@media only screen and (min-width: 1900px) {
+  .navbar-brand{
+// font-size: 1.5rem !important;
+}
+}
+
+.rainbow_text_animated {
+    background: linear-gradient(to right, #6666ff,  #00ff00, #0099ff , #0099ff , #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 6s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
+
+
+// @keyframes rainbow_animation_two {
+//   0%{background-position:0% 49%}
+// 50%{background-position:100% 52%}
+// 100%{background-position:0% 49%}
+// }

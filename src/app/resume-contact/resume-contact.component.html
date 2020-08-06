@@ -1,103 +1,82 @@
-
 <div class="grid-container">
-<div class="grid-item pdf">
-    <div class="sub-container">
-    <div class="grid-item">
-  <pdf-viewer *ngIf="EdgebrowserCheck && IEbrowserCheck" style="
-    margin-bottom: 25px;
-  min-width: 805px;
-      min-height: 459px;
-"
-     [show-all]="true"
+   <div class="grid-item pdf">
+      <div class="sub-container">
+         <div class="grid-item">
+            <pdf-viewer *ngIf="EdgebrowserCheck && IEbrowserCheck" style="
+            margin-bottom: 25px;
+            min-width: 805px;
+            min-height: 459px;
+            "
+            [show-all]="true"
+            [src]="pdfSrc"
+            [render-text]="true"
+            class='viewer'
+            ></pdf-viewer>
+            <iframe *ngIf="!EdgebrowserCheck || !IEbrowserCheck" src="assets/Ira Watt Resume.pdf" style="
+               margin-bottom: 25px;
+               min-width: 805px;
+               min-height: 459px;    border: none;
+               "   class='viewer'></iframe>
+         </div>
+         <div class="grid-item load" ><a *ngIf="EdgebrowserCheck && IEbrowserCheck"   href="assets/Ira Watt Resume.pdf" download style="
+            margin-right: 10px;
+            ">
+            📝 Download Resume
+            </a>
+         </div>
+      </div>
+   </div>
+   <div class="grid-item contact" >
+      <div class="sub-container2">
+         <div class="grid-item" id="about" style="
+            margin-right: 5vw;
+            margin-left: 5vw;
+            ">
+            <img id="profilePic" src="assets/profile.jpg" style="height: 75px;border-radius: 50%;" >
+            <h2>About me</h2>
+            <p style="font-size: 0.75rem;">I've been actively developing products for over 3 years in the northeast of England. I interned for
+               14 months at NUIT developing an assortment of projects for them over that period.
+               I'm currently finishing my final year at Newcastle University after achieving 83.9% in my second-year whilst working on multiple side projects in my own time.
+            </p>
+            <hr style="margin-left: 45px; margin-right: 45px;">
+         </div>
+         <div class="grid-item larry">
+            📯 <br>
+            Email: irawatt@gmail.com<br>
+            <a href="  https://stackoverflow.com/users/10053793/ira-jw" target="_blank"><img src="assets/stack-overflow.svg" width="20" ></a><br>
+            <a href="  https://www.linkedin.com/in/ira-watt/" target="_blank"><img src="assets/linkedin.svg" width="20" ></a><br>
+            <a href="  https://github.com/wisespira" target="_blank"><img src="assets/github.svg" width="20" ></a><br><br>
+         </div>
+         <div class="grid-item">
+            <div class="remove"> Developed in 🛸<br>
+               <span style="color: grey">Angular7, JQuery, Bootstrap, Three.js, and Firebase</span>
+               <br><br>    <a href="  https://github.com/wisespira/Website" target="_blank">This Websites Repo
+               </a><br>
+               Copyright ©️<br>
+               <span style="color: grey">Ira Watt | 2019</span>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!--
+      <form>
 
-      [src]="pdfSrc"
-      [render-text]="true"
-      class='viewer'
-  ></pdf-viewer>
+      name
+      <div class="field">
+       <input type="text" name="name" class="input" placeholder="Your Name">
+      </div>
 
+      email
+      <div class="field">
+       <input type="email" name="email" class="input" placeholder="Your Email">
+      </div>
 
+      message
+      <div class="field">
+       <textarea class="textarea" name="message" placeholder="What's on your mind?"></textarea>
+      </div>
 
-  <iframe *ngIf="!EdgebrowserCheck || !IEbrowserCheck" src="assets/Ira Watt Resume.pdf" style="
-    margin-bottom: 25px;
-  min-width: 805px;
-      min-height: 459px;    border: none;
-"   class='viewer'></iframe>
+      <button type="submit" class="button is-danger is-large">Submit</button>
 
-
-    </div>
- <div class="grid-item load" ><a *ngIf="EdgebrowserCheck && IEbrowserCheck"   href="assets/Ira Watt Resume.pdf" download style="
-    margin-right: 10px;
-">
-  📝 Download Resume
-     </a></div></div>
-</div>
-
-<div class="grid-item contact" >
-<div class="sub-container2">
-    <div class="grid-item" id="about" style="
-    margin-right: 5vw;
-    margin-left: 5vw;
-">
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img src="assets/profile.jpg" style="height: 75px;border-radius: 50%;" ><h2>About me</h2>
-    <p style="font-size: 0.75rem;">I've been actively developing products for over 3 years in the northeast of England. I interned for
-    14 months at NUIT developing an assortment of projects for them over that period.
-        I'm currently finishing my final year at Newcastle University after achieving 83.9% in my second-year whilst working on multiple side projects in my own time. </p>
-
-
-
-
-    <hr style="margin-left: 45px; margin-right: 45px;">
-    </div>
-    <div class="grid-item">
-   📯 <br>
-   Email: irawatt@gmail.com<br>
-   <a href="  https://stackoverflow.com/users/10053793/ira-jw" target="_blank"><img src="assets/stack-overflow.svg" width="20" ></a><br>
-    <a href="  https://www.linkedin.com/in/ira-watt/" target="_blank"><img src="assets/linkedin.svg" width="20" ></a><br>
-     <a href="  https://github.com/wisespira" target="_blank"><img src="assets/github.svg" width="20" ></a><br><br>
-
-   <div class="remove"> Developed in 🛸<br>
-    <span style="color: grey">Angular7, JQuery, Bootstrap, Three.js, and Firebase</span>
-   <br><br>    <a href="  https://github.com/wisespira/Website" target="_blank">This Websites Repo
-</a><br>
-    Copyright ©️<br>
-
-     <span style="color: grey">Ira Watt | 2019</span></div></div>
-</div>
-
-<!--
-   <form>
-
-   name
-  <div class="field">
-    <input type="text" name="name" class="input" placeholder="Your Name">
-  </div>
-
-   email
-  <div class="field">
-    <input type="email" name="email" class="input" placeholder="Your Email">
-  </div>
-
-   message
-  <div class="field">
-    <textarea class="textarea" name="message" placeholder="What's on your mind?"></textarea>
-  </div>
-
-  <button type="submit" class="button is-danger is-large">Submit</button>
-
-</form>-->
-</div>
-
+      </form>-->
 </div>

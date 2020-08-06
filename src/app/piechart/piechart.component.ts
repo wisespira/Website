@@ -15,7 +15,8 @@ export class PiechartComponent implements OnInit {
 
     infoOnSelect: proj[] = [];
     selectedItem: string = "";
-    titles = ['Frontend tech 🖥️', 'Backend tech 📚', 'Soft Skills 🤹', 'All Skills & Projects']
+    // titles = ['Frontend Tech 🖥️', 'Backend Tech 📚', 'Soft Skills 🤹', 'All Skills by Projects']
+    titles = ['Frontend Tech', 'Backend Tech', 'Soft Skills', 'All Skills by Projects']
     title = '';
     projectObjs: projectObjs[] = [
       {
