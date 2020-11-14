@@ -60,6 +60,7 @@ export class AppComponent {
         }
     }
 
+    intro = true
     raycaster = new THREE.Raycaster();
     mouse = new THREE.Vector2();
     renderer = new THREE.WebGLRenderer({
@@ -206,6 +207,10 @@ export class AppComponent {
         var light = new THREE.PointLight(0xffff00, 2, 750);
         light.position.set(0, 0, 25);
         this.scene.add(light);*/
+    }
+
+    enterSite(){
+      this.intro = !this.intro 
     }
 
     getRef(fullPageRef) {

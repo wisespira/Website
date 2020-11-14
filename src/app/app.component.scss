@@ -6,6 +6,32 @@
 //     font-family: myFont;
 //     src: url("/assets/font/Prata/Prata-Regular.ttf") format("truetype");
 // }
+
+.textContainer{
+left: 0;
+right:0;
+margin-left: auto;
+margin-right: auto;
+position: absolute;
+width: 50%;
+top: 40%;
+
+}
+
+.infoBox{
+  margin: auto;
+  width: 50%;
+}
+.infoText{
+  margin: 0;
+ position: absolute;
+ top: 45%;
+ -ms-transform: translateY(-50%);
+ transform: translateY(-50%);
+ max-width: 50%;
+max-height: 25%;
+}
+
 @font-face {
     font-family: myFont;
     src: url("/assets/font/Pontano_Sans/PontanoSans-Regular.ttf") format("truetype");
@@ -46,17 +72,7 @@ canvas{
 
 }
 
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 480px) {
-    css-typing p{
-            font-size: 0.8rem !important;
-    }
-    .garry{
-        font-size: 0.8rem !important;
-    }
 
-}
 .pointers{
 
     pointer-events: all;
@@ -394,4 +410,43 @@ animation: fadeIn ease 12s;
  margin-left: 50px;
  }
 
+}
+
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+  .infoText h1{
+    font-size: 1.25rem
+  }
+  .infoText p{
+    font-size: 0.8rem
+  }
+  .infoText button{
+    font-size: 0.8rem
+  }
+  .infoText{
+   top: 25%;
+ }
+ .infoText{
+    max-width: 70%;
+ }
+ .infoBox{
+   margin: auto;
+   width: 70%;
+ }
+ .css-typing{
+   text-align: left;
+   margin-left: 5px;
+ }
+ css-typing p{
+         font-size: 0.9rem !important;
+ }
+ .garry{
+     font-size: 0.9rem !important;
+ }
+ .textContainer{
+   width: 70%;
+   top: 30%;
+ }
 }

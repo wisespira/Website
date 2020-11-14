@@ -1,11 +1,22 @@
-<app-navbar *ngIf="!phone"></app-navbar>
-<app-phone-page *ngIf="phone"></app-phone-page>
-<div *ngIf="!phone">
+<app-navbar ></app-navbar>
+<!-- <app-phone-page *ngIf="phone"></app-phone-page> -->
+<div >
 <div fullpage id="fullpage" [options]="config" (ref)="getRef($event)">
 <div class="section">
    <div #rendererContainer class="fadeinfast2"></div>
-  <div class="together">
-    <div class="test " style="left: 0;right:0;margin-left: auto;margin-right: auto;position: absolute;width: 50%;top: 40%;">
+   <div *ngIf="intro"  class="fadeinfast2" style="background: transparent;">
+   <div class="infoBox">
+   <div class="infoText">
+   <h1>About</h1>
+   <p>This site was developed to showcase my work whilst at University and on placment. Now It is more of a
+   consept site then a true porfolio though the site still conatins up to date resume. The interactive background
+  was built with the help of the Three.js library, all other assets where made by myself.<br><br>Disclaimer: due to time constraints the site is designed only for desktop and was never made 100% mobile friendly</p>
+   <button type="button" class="btn btn-light" style="background: transparent;" (click)="enterSite()">Continue to site 😄</button>
+   </div>
+   </div>
+   </div>
+  <div class="together" *ngIf="!intro">
+    <div class="textContainer" >
 
 
    <div class="css-typing">
@@ -70,7 +81,7 @@
 
 
 </div>
-   <div *ngIf="EdgebrowserCheck" class="warning blink_me" style="font-size: 0.95rem;"><span style="color: red;">WARNING</span> do not hit the balls</div>
+   <div *ngIf="EdgebrowserCheck&&!phone" class="warning blink_me" style="font-size: 0.95rem;"><span style="color: red;">WARNING</span> do not hit the balls</div>
   <!-- <div class="butttons"><button type="button" class="btn btn-outline-danger">+</button><button type="button" class="btn btn-outline-info">-</button> </div>-->
 </div>
 <div class="section" *ngIf="IEbrowserCheck">
