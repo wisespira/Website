@@ -15,7 +15,7 @@ constant panaramic Three.js visual background (updated ~ not the balls). Current
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.4.
 
-## how to run local
+## how to run locally
 
 windows+mac
 
